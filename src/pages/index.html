@@ -22,10 +22,15 @@
               alt="Plus Auto Marketplace"
             />
           </a>
-          <div id="mainNavLinks" class="nav-links-wrapper">
+          <div class="nav-links-wrapper">
             <div class="nav-links-main-wrapper">
-              <ul class="list-unstyled nav-links nav-links-main">
-                <li class="nav-links-item"><a href="#" title="">Acasã</a></li>
+              <ul
+                id="mainNavLinks"
+                class="list-unstyled nav-links nav-links-main"
+              >
+                <li class="nav-links-item">
+                  <a href="#" title="">Acasã</a>
+                </li>
                 <li class="nav-links-item">
                   <a href="#" title="">Autoturisme</a>
                 </li>
@@ -85,7 +90,217 @@
       </button>
       <div class="navigation-background">&nbsp;</div>
     </header>
-    <main id="content" class="main">Content</main>
+    <main id="content" class="main">
+      <section class="hero hero-home text-center">
+        <div class="container-general">
+          <h1 class="main-title mb-5">Găsește autoturismul perfect</h1>
+          <div class="search-console">
+            <button
+              type="button"
+              class="btn btn-small btn-pill btn-primary btn-shuffle mb-2 js-search-shuffle"
+            >
+              <svg>
+                <use href="../assets/images/sprite.svg#icon-shuffle"></use>
+              </svg>
+              Schimba modul de cautare
+            </button>
+            <div class="search-console-wrapper">
+              <div class="search-console-bar search-console-bar-advanced">
+                <div class="search-console-bar-dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Autoturisme
+                  </button>
+                  <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Autoturisme</a></li>
+                    <li><a class="dropdown-item" href="#">Motociclete</a></li>
+                    <li><a class="dropdown-item" href="#">Autoutilitare</a></li>
+                    <li><a class="dropdown-item" href="#">Altele</a></li>
+                  </ul>
+                </div>
+                <div class="search-console-smart-field">
+                  <div class="search-box">
+                    <input
+                      type="search"
+                      autocomplete="off"
+                      id="intelligent-search"
+                      placeholder="Mercedes GLE Benzină"
+                      class="show-search"
+                      name="name"
+                      tabindex="2"
+                      value=""
+                      aria-required="true"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="box-content-search shadow-sm"
+                    id="box-content-search"
+                  >
+                    <ul class="list-unstyled box-car-search">
+                      <li>
+                        <a
+                          href="https://dev.plus-auto.ro/anunt/audi-sq8-e-tron-89492/"
+                          class="car-search-item"
+                        >
+                          <div class="box-car-search-img">
+                            <img
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94464/94464-1827028-thumbnail.webp"
+                              alt="img"
+                            />
+                          </div>
+                          <div class="box-car-search-info">
+                            <p class="box-car-search-name">Audi SQ8 e-tron</p>
+                            <span class="box-car-search-price">63.000 €</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://dev.plus-auto.ro/anunt/audi-a7-89473/"
+                          class="car-search-item"
+                        >
+                          <div class="box-car-search-img">
+                            <img
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94443/94443-1826681-thumbnail.webp"
+                              alt="img"
+                            />
+                          </div>
+                          <div class="box-car-search-info">
+                            <p class="box-car-search-name">Audi A7</p>
+                            <span class="box-car-search-price">41.000 €</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://dev.plus-auto.ro/anunt/audi-a3-35-tfsi-sportback-2022-garantie-89444/"
+                          class="car-search-item"
+                        >
+                          <div class="box-car-search-img">
+                            <img
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94412/94412-1826061-thumbnail.webp"
+                              alt="img"
+                            />
+                          </div>
+                          <div class="box-car-search-info">
+                            <p class="box-car-search-name">
+                              AUDI A3 - 35 TFSI SPORTBACK 2022 - GARAN...
+                            </p>
+                            <span class="box-car-search-price">23.000 €</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <span class="intelligent-search-info">
+                      Am filtrat <strong>1193</strong> anunturi din
+                      <strong>12518</strong> total anunturi <br />
+                      Le afisam pe cele mai relevante: <strong>12</strong>
+                    </span>
+                  </div>
+                </div>
+                <div class="search-console-submit">
+                  <button
+                    type="submit"
+                    data-total-results="12454"
+                    class="btn btn-big btn-pill btn-primary btn-search"
+                  >
+                    <svg>
+                      <use
+                        href="../assets/images/sprite.svg#icon-magnifying-glass"
+                      ></use>
+                    </svg>
+                    Caută
+                    <strong id="isearch-total-results">12454</strong>
+                    Autoturisme
+                  </button>
+                </div>
+              </div>
+              <div class="search-console-bar search-console-bar-classic d-none">
+                <div class="search-console-bar-dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Used
+                  </button>
+                  <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Audi</a></li>
+                    <li><a class="dropdown-item" href="#">BMW</a></li>
+                    <li><a class="dropdown-item" href="#">Skoda</a></li>
+                    <li><a class="dropdown-item" href="#">Opel</a></li>
+                  </ul>
+                </div>
+                <div class="search-console-bar-dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Brand
+                  </button>
+                  <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Audi</a></li>
+                    <li><a class="dropdown-item" href="#">BMW</a></li>
+                    <li><a class="dropdown-item" href="#">Skoda</a></li>
+                    <li><a class="dropdown-item" href="#">Opel</a></li>
+                  </ul>
+                </div>
+                <div class="search-console-bar-dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Model
+                  </button>
+                  <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">A3</a></li>
+                    <li><a class="dropdown-item" href="#">Accord</a></li>
+                    <li><a class="dropdown-item" href="#">Octavia</a></li>
+                  </ul>
+                </div>
+                <div class="search-console-bar-dropdown">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Price
+                  </button>
+                  <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">20000$</a></li>
+                    <li><a class="dropdown-item" href="#">14500$</a></li>
+                  </ul>
+                </div>
+                <div class="search-console-submit">
+                  <button
+                    type="submit"
+                    data-total-results="12454"
+                    class="btn btn-big btn-pill btn-primary btn-search btn-search-circle"
+                  >
+                    <svg>
+                      <use
+                        href="../assets/images/sprite.svg#icon-magnifying-glass"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">Footer</footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

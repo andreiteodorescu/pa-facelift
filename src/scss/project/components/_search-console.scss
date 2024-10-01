@@ -1,0 +1,252 @@
+.search-console {
+  max-width: 925px;
+  margin: 0 auto;
+
+  &-full {
+    max-width: none;
+  }
+
+  &-wrapper {
+    background-color: #fff;
+    border-radius: 50px;
+    height: 76px;
+    padding: 10px;
+  }
+
+  &-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &.d-none > * {
+      opacity: 0;
+    }
+
+    &.search-bar-active > * {
+      opacity: 0;
+      animation: fadeIn 0.9s forwards;
+
+      &:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 0.6s;
+      }
+
+      &:nth-child(6) {
+        animation-delay: 0.7s;
+      }
+    }
+
+    &-dropdown {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      padding-right: 1px;
+      max-width: 210px;
+
+      &:first-child .dropdown-toggle {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 36px;
+        background: #e1e1e1;
+        transform: translateY(-50%);
+      }
+
+      &-last {
+        padding-right: 0;
+        margin-right: 10px;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .dropdown-toggle {
+        background: none;
+        border: none;
+        padding-right: 60px;
+        padding-left: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        white-space: normal;
+        line-height: 1;
+        text-align: left;
+
+        &::after {
+          right: 40px;
+        }
+
+        &:hover,
+        &:active,
+        &.show {
+          background: $grey-light;
+        }
+      }
+
+      .dropdown-menu {
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+
+        li {
+          border-bottom: 1px solid #e0dfe5;
+          font-size: 15px;
+
+          a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: background 0.3s ease-in-out;
+
+            &:hover,
+            &:active {
+              background: $grey-light-2;
+            }
+          }
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-smart-field {
+    flex: 3;
+    position: relative;
+
+    .search-box {
+      position: relative;
+
+      input {
+        background: none;
+        border: none;
+        width: 100%;
+        height: 47px;
+        line-height: 47px;
+        color: #222;
+        padding: 0 20px;
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+
+    .box-content-search {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      background-color: #fff;
+      height: 382px;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 0px 0px 16px 16px;
+
+      .intelligent-search-info {
+        font-size: 13px;
+        line-height: 18px;
+        color: rgb(145 149 171);
+        font-weight: 500;
+        display: block;
+        background: #eef1fb;
+        padding-bottom: 10px;
+        padding-top: 5px;
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        overflow: hidden;
+      }
+    }
+
+    .box-car-search {
+      height: 333px;
+      overflow: auto;
+      margin-bottom: 0;
+
+      li {
+        border-bottom: 1px solid rgba(217, 217, 217, 1);
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .car-search-item {
+        display: flex;
+        gap: 15px;
+        padding: 10px 20px;
+        position: relative;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+          background: $grey-light-2;
+        }
+      }
+
+      &-img {
+        border-radius: 5px;
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+
+      &-info {
+        width: 100%;
+        text-align: left;
+      }
+
+      &-name {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+
+      &-price {
+        font-size: 16px !important;
+        line-height: 28px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-submit {
+    margin-left: auto;
+  }
+}

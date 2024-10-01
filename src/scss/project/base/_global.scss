@@ -1,7 +1,40 @@
+body {
+  font-size: 15px;
+}
+
 .container-xxxl {
   @include make-container();
 
   @media (min-width: 1855px) {
     max-width: 1854px;
+  }
+}
+
+.container-general {
+  @include make-container();
+
+  @media (min-width: 1455px) {
+    max-width: 1454px;
+  }
+}
+
+.dropdown-toggle {
+  padding-right: 20px;
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    background-image: url("../assets/images/angle-down-regular.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    content: "";
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 13px;
+    height: 12px;
   }
 }

@@ -1,0 +1,82 @@
+.btn {
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 6px;
+  line-height: 1;
+  font-size: 15px;
+  min-height: 48px;
+  padding: 11px 15px 9px;
+
+  &-pill {
+    border-radius: 30px;
+  }
+
+  &-small {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 14px;
+    min-height: auto;
+  }
+
+  &-big {
+    min-height: 54px;
+  }
+}
+
+.btn-primary {
+  background-color: $red;
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $red-hover;
+  }
+}
+
+.btn-shuffle {
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    margin-right: 8px;
+    position: relative;
+    top: -1px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:active,
+  &:hover {
+    svg {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.btn-search {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-circle {
+    padding: 0;
+    width: 56px;
+    height: 56px;
+
+    svg {
+      margin-right: 0;
+      width: 16px;
+      height: 16px;
+      top: 0;
+    }
+  }
+}
