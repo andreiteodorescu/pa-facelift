@@ -1,0 +1,7 @@
+.container-xxxl {
+  @include make-container();
+
+  @media (min-width: 1855px) {
+    max-width: 1854px;
+  }
+}
