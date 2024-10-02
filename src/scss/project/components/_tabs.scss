@@ -1,0 +1,42 @@
+.custom-tabs {
+  justify-content: center;
+  gap: 30px;
+
+  .nav-link {
+    position: relative;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    color: $link-color;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-bottom: 2px solid $red;
+      left: 51%;
+      right: 51%;
+      transition: all 0.3s;
+      bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $link-hover;
+    }
+
+    &.active {
+      &::after {
+        left: 0;
+        right: 0;
+      }
+
+      &:hover,
+      &:focus {
+        color: $link-color;
+      }
+    }
+  }
+}

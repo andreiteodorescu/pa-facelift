@@ -54,7 +54,9 @@ For PUL: If you need to reduce the stylesheet file size delete de above lines an
 @import "components/search-console";
 @import "components/banners";
 @import "components/vehicle-types-list";
-// @import "components/swiper";
+@import "components/tabs";
+@import "components/card-car.scss";
+@import "components/swiper";
 // @import "components/search-results";
 // @import "components/contact-form";
 // @import "components/reservation-success";

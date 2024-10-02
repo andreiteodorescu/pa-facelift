@@ -6,7 +6,7 @@
   display: inline-grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  border-radius: 16px;
+  border-radius: $border-radius;
   overflow: hidden;
   height: 100%;
 

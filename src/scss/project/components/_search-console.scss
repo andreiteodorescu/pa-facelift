@@ -97,7 +97,7 @@
         right: 0;
         width: 1px;
         height: 36px;
-        background: #e1e1e1;
+        background: $grey-extralight-2;
         transform: translateY(-50%);
 
         @include media-breakpoint-down(md) {

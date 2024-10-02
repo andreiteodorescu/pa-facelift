@@ -361,19 +361,170 @@
         <div class="container-general">
           <h2 class="secondary-title mb-5">Cautã dupa tip</h2>
           <ul class="list-unstyled vehicle-types-list observe">
-            <li>
+            <li class="vehicle-types-list-item">
               <a href="#" title="">
                 <svg>
-                  <use
-                    href="../assets/images/sprite.svg#icon-arrow-right"
-                  ></use>
+                  <use href="../assets/images/sprite.svg#icon-suv"></use>
                 </svg>
-                <h5>SUV</h5>
+                <h5 class="vehicle-types-list-item-title">SUV</h5>
+              </a>
+            </li>
+            <li class="vehicle-types-list-item">
+              <a href="#" title="">
+                <svg>
+                  <use href="../assets/images/sprite.svg#icon-sedan"></use>
+                </svg>
+                <h5 class="vehicle-types-list-item-title">Sedan</h5>
+              </a>
+            </li>
+            <li class="vehicle-types-list-item">
+              <a href="#" title="">
+                <svg>
+                  <use href="../assets/images/sprite.svg#icon-hatchback"></use>
+                </svg>
+                <h5 class="vehicle-types-list-item-title">Hatchback</h5>
+              </a>
+            </li>
+            <li class="vehicle-types-list-item">
+              <a href="#" title="">
+                <svg>
+                  <use href="../assets/images/sprite.svg#icon-coupe"></use>
+                </svg>
+                <h5 class="vehicle-types-list-item-title">Coupe</h5>
               </a>
             </li>
           </ul>
         </div>
       </section>
+      <section class="component-block">
+        <div class="container-general">
+          <h2 class="secondary-title text-center mb-5">Anunturi relevante</h2>
+
+          <ul class="nav nav-tabs custom-tabs" id="addsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="adds-tab1"
+                data-bs-toggle="tab"
+                data-bs-target="#adds-tab1-pane"
+                type="button"
+                role="tab"
+                aria-controls="adds-tab1-pane"
+                aria-selected="true"
+              >
+                Disponibile imediat
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="adds-tab2"
+                data-bs-toggle="tab"
+                data-bs-target="#adds-tab2-pane"
+                type="button"
+                role="tab"
+                aria-controls="adds-tab2-pane"
+                aria-selected="false"
+              >
+                Disponibile la comanda
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="adds-tab3"
+                data-bs-toggle="tab"
+                data-bs-target="#adds-tab3-pane"
+                type="button"
+                role="tab"
+                aria-controls="adds-tab3-pane"
+                aria-selected="false"
+              >
+                Cele mai vizualizate
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content pt-5" id="addsTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="adds-tab1-pane"
+              role="tabpanel"
+              aria-labelledby="adds-tab1"
+              tabindex="0"
+            >
+              <div class="swiper js-adds-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-car">
+                      <figure class="card-car-image">
+                        <a href="#" title="">
+                          <img
+                            width="360"
+                            height="270"
+                            src="../assets/images/temporary/97007-1878508-thumbnail.webp"
+                            alt=""
+                          />
+                        </a>
+                      </figure>
+                      <div class="card-car-content">
+                        <h4 class="card-car-content-title">
+                          <a href="#" title="">BMW X5 M50d</a>
+                        </h4>
+                        <div class="card-car-content-seller">Plus Auto</div>
+                        <ul class="list-unstyled card-car-content-features">
+                          <li class="card-car-content-features-item">
+                            107.000 km
+                          </li>
+                          <li class="card-car-content-features-item">Diesel</li>
+                          <li class="card-car-content-features-item">
+                            Automata
+                          </li>
+                        </ul>
+                        <div class="card-car-content-action">
+                          <div class="card-car-content-action-price">
+                            77.000 &euro;
+                          </div>
+                          <a href="#" title="">Vezi detalii</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div> -->
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="adds-tab2-pane"
+              role="tabpanel"
+              aria-labelledby="adds-tab2"
+              tabindex="0"
+            >
+              Tab 2
+            </div>
+            <div
+              class="tab-pane fade"
+              id="adds-tab3-pane"
+              role="tabpanel"
+              aria-labelledby="adds-tab3"
+              tabindex="0"
+            >
+              Tab 3
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="component-block">Content</section>
     </main>
     <footer class="footer">Footer</footer>
 
@@ -383,6 +534,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/standalone/swiper.min.js"></script>
     <script src="../js/prod/main.js"></script>
   </body>
 </html>

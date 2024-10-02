@@ -1,4 +1,65 @@
 .vehicle-types-list {
   margin: 0;
   display: inline-flex;
+  justify-content: center;
+  gap: 15px;
+
+  &-item {
+    flex-basis: 140px;
+    flex-shrink: 0;
+    height: 140px;
+    border: 1px solid $grey-extralight-2;
+    border-radius: $border-radius;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+
+      a {
+        background-color: $grey-white;
+      }
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 5px 10px;
+      align-items: center;
+      text-decoration: none;
+      height: 100%;
+      transition: background-color 0.3s ease-in-out;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+      margin: 0;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  }
+
+  &.observe {
+    .vehicle-types-list-item {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in forwards;
+      animation-play-state: paused;
+
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
+
+    &.in-view .vehicle-types-list-item {
+      animation-play-state: running;
+    }
+  }
 }
