@@ -40,5 +40,49 @@
     &-seller {
       font-size: 14px;
     }
+
+    &-features {
+      border-top: 1px solid $grey-extralight-2;
+      border-bottom: 1px solid $grey-extralight-2;
+      padding: 15px 0;
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        flex: 1;
+        text-align: center;
+
+        &-icon {
+          width: 16px;
+          height: 16px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    &-action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-price {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      &-link {
+        color: $red;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

@@ -12883,6 +12883,41 @@ h1,
 .card-car-content-seller {
   font-size: 14px;
 }
+.card-car-content-features {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px 0;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-car-content-features-item {
+  flex: 1;
+  text-align: center;
+}
+.card-car-content-features-item-icon {
+  width: 16px;
+  height: 16px;
+}
+.card-car-content-features-item span {
+  display: block;
+}
+.card-car-content-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-car-content-action-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+.card-car-content-action-link {
+  color: #c03a2e;
+  text-decoration: none;
+}
+.card-car-content-action-link:hover, .card-car-content-action-link:active {
+  text-decoration: underline;
+}
 
 /**
  * Swiper 11.1.14
