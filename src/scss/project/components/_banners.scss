@@ -1,0 +1,76 @@
+.component-banners {
+  margin-top: -200px;
+}
+
+.banner-box {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+
+  &-image {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #050b20 0%, rgba(5, 11, 32, 0) 100%);
+      opacity: 0.5;
+    }
+  }
+
+  &-content {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 80px;
+    position: relative;
+    color: #fff;
+
+    @include media-breakpoint-down(xl) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &-title {
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-weight: 300;
+
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 20px;
+      font-weight: 300;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .btn {
+      align-self: start;
+    }
+  }
+}

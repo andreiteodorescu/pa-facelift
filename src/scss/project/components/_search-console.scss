@@ -11,12 +11,27 @@
     border-radius: 50px;
     height: 76px;
     padding: 10px;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-down(md) {
+      background-color: transparent;
+      border-radius: 0;
+      height: auto;
+      padding: 0;
+    }
   }
 
   &-bar {
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+    }
 
     &.d-none > * {
       opacity: 0;
@@ -25,6 +40,11 @@
     &.search-bar-active > * {
       opacity: 0;
       animation: fadeIn 0.9s forwards;
+
+      @include media-breakpoint-down(md) {
+        opacity: 1;
+        animation: none;
+      }
 
       &:nth-child(1) {
         animation-delay: 0.2s;
@@ -58,6 +78,13 @@
       padding-right: 1px;
       max-width: 210px;
 
+      @include media-breakpoint-down(md) {
+        max-width: none;
+        height: auto;
+        padding-right: 0;
+        width: 100%;
+      }
+
       &:first-child .dropdown-toggle {
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
@@ -72,11 +99,19 @@
         height: 36px;
         background: #e1e1e1;
         transform: translateY(-50%);
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
 
       &-last {
         padding-right: 0;
         margin-right: 10px;
+
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
 
         &::after {
           display: none;
@@ -97,14 +132,29 @@
         line-height: 1;
         text-align: left;
 
+        @include media-breakpoint-down(md) {
+          background-color: #fff;
+          border-radius: 50px;
+          height: 50px;
+          padding-right: 55px;
+        }
+
         &::after {
           right: 40px;
+
+          @include media-breakpoint-down(md) {
+            right: 31px;
+          }
         }
 
         &:hover,
         &:active,
         &.show {
           background: $grey-light;
+
+          @include media-breakpoint-down(md) {
+            background-color: #fff;
+          }
         }
       }
 
@@ -141,8 +191,17 @@
     flex: 3;
     position: relative;
 
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
     .search-box {
       position: relative;
+
+      @include media-breakpoint-down(md) {
+        background-color: #fff;
+        border-radius: 50px;
+      }
 
       input {
         background: none;
@@ -152,6 +211,12 @@
         line-height: 47px;
         color: #222;
         padding: 0 20px;
+
+        @include media-breakpoint-down(md) {
+          height: 50px;
+          line-height: 50px;
+          padding: 0 30px;
+        }
 
         &:focus-visible {
           outline: none;
@@ -248,5 +313,14 @@
 
   &-submit {
     margin-left: auto;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      width: 100%;
+
+      .btn-search {
+        width: 100%;
+      }
+    }
   }
 }

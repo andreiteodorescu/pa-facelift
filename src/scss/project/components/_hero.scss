@@ -4,5 +4,10 @@
 
   &-home {
     padding-top: 80px;
+    padding-bottom: 250px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 50px;
+    }
   }
 }
