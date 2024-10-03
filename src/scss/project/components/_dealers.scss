@@ -1,4 +1,4 @@
-.vehicle-types-list {
+.dealers-list {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -6,9 +6,9 @@
   flex-wrap: wrap;
 
   &-item {
-    flex-basis: 145px;
+    flex-basis: 225px;
     flex-shrink: 0;
-    min-height: 140px;
+    min-height: 180px;
     border: 1px solid $grey-extralight-2;
     border-radius: $border-radius;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -17,38 +17,44 @@
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
-
-      a {
-        background-color: $grey-white;
-      }
     }
 
     a {
       display: flex;
       flex-direction: column;
-      padding: 30px 5px 10px;
       align-items: center;
       text-decoration: none;
       height: 100%;
-      transition: background-color 0.3s ease-in-out;
+    }
 
-      svg {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
+    figure {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 12px 10px;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        max-width: 160px;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
       }
     }
 
-    &-title {
-      font-size: 18px;
+    figcaption {
+      font-size: 16px;
       margin: 0;
-      font-weight: 400;
       margin-top: 15px;
+      text-transform: uppercase;
     }
   }
 
   &.observe {
-    .vehicle-types-list-item {
+    .dealers-list-item {
       opacity: 0;
       animation: fadeIn 0.5s ease-in forwards;
       animation-play-state: paused;
@@ -60,7 +66,7 @@
       }
     }
 
-    &.in-view .vehicle-types-list-item {
+    &.in-view .dealers-list-item {
       animation-play-state: running;
     }
   }
