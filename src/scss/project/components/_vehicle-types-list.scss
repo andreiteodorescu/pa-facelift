@@ -1,8 +1,9 @@
 .vehicle-types-list {
   margin: 0;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 
   &-item {
     flex-basis: 140px;

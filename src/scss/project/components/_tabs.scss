@@ -1,6 +1,27 @@
 .custom-tabs {
   justify-content: center;
   gap: 30px;
+  flex-wrap: nowrap;
+
+  @media (max-width: 400px) {
+  }
+
+  @include media-breakpoint-down(lg) {
+    gap: 20px;
+
+    .nav-item {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    gap: 10px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    gap: 5px;
+  }
 
   .nav-link {
     position: relative;
@@ -10,6 +31,11 @@
     padding-left: 0;
     padding-right: 0;
     color: $link-color;
+    height: 100%;
+
+    @include media-breakpoint-down(lg) {
+      display: inline-block;
+    }
 
     &::after {
       content: "";

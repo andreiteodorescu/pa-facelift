@@ -39,7 +39,7 @@
   &:hover,
   &:first-child:active,
   &:focus-visible {
-    background-color: $red-hover;
+    background-color: $red-hover !important;
   }
 }
 
@@ -50,7 +50,35 @@
   &:hover,
   &:first-child:active,
   &:focus-visible {
-    background-color: $grey-extralight;
+    background-color: $grey-extralight !important;
+  }
+}
+
+.btn-link {
+  padding: 0;
+  min-height: auto;
+  text-decoration: none;
+  color: $red;
+
+  svg {
+    fill: $red;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    color: $red !important;
+    text-decoration: underline;
+  }
+
+  &.btn-arrow {
+    &:active,
+    &:hover,
+    &:first-child:active,
+    &:focus-visible {
+      text-decoration: none;
+    }
   }
 }
 

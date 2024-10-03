@@ -2,6 +2,8 @@ $font-family-base: "DM Sans", sans-serif;
 $link-color: #050b20;
 $link-hover: #6f6f6f;
 
+$gen-color: #212529;
+
 $grey-white: #fdfdfd;
 $grey-extralight: #f2f2f2;
 $grey-extralight-2: #e1e1e1;
@@ -12,3 +14,14 @@ $red: #c03a2e;
 $red-hover: #e6493a;
 
 $border-radius: 12px;
+
+$zindex-dropdown: 1601;
+$zindex-sticky: 1620;
+$zindex-fixed: 1630;
+$zindex-offcanvas-backdrop: 1640;
+$zindex-offcanvas: 1645;
+$zindex-modal-backdrop: 1650;
+$zindex-modal: 1655;
+$zindex-popover: 1670;
+$zindex-tooltip: 1680;
+$zindex-toast: 1690;
