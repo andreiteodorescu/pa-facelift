@@ -43,6 +43,19 @@
   }
 }
 
+.btn-secondary {
+  background-color: $yellow;
+  color: $link-color;
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $yellow-hover !important;
+    color: $link-color !important;
+  }
+}
+
 .btn-light {
   background-color: #fff;
 
@@ -51,6 +64,25 @@
   &:first-child:active,
   &:focus-visible {
     background-color: $grey-extralight !important;
+  }
+}
+
+.btn-outline-light {
+  background-color: #fff;
+  border: 1px solid $link-color;
+  color: $link-color;
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $link-color !important;
+    border-color: $link-color !important;
+    color: #fff !important;
+
+    svg {
+      fill: #fff;
+    }
   }
 }
 
