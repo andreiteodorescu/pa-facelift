@@ -1,0 +1,31 @@
+.social-media-links {
+  margin: 0;
+  display: inline-flex;
+  gap: 5px;
+
+  a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:active {
+      background-color: $link-color;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: fill 0.3s ease-in-out;
+  }
+}

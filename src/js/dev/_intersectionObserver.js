@@ -18,7 +18,7 @@ let threshold = 0.7;
 // Function to handle screen size changes
 const handleResize = () => {
   if (window.innerWidth < 1200) {
-    threshold = 0.5; // Smaller threshold for small screens
+    threshold = 0.2; // Smaller threshold for small screens
   } else {
     threshold = 0.6; // Default threshold for larger screens
   }

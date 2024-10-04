@@ -38,8 +38,27 @@ body.nav-is-open {
       text-decoration: none;
       transition: color 0.2s ease-in-out;
 
-      &:hover {
-        color: $link-hover;
+      @include media-breakpoint-up(lg) {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          border-bottom: 1px solid $gen-color;
+          left: 51%;
+          right: 51%;
+          transition: all 0.3s;
+          bottom: 0;
+        }
+
+        &:hover,
+        &:active {
+          &::after {
+            left: 0;
+            right: 0;
+          }
+        }
       }
     }
   }
