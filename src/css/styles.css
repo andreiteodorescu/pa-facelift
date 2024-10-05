@@ -12407,7 +12407,7 @@ h1,
 .search-console-wrapper {
   background-color: #fff;
   border-radius: 50px;
-  height: 76px;
+  height: 75px;
   padding: 10px;
   position: relative;
   z-index: 1;
@@ -12475,6 +12475,16 @@ h1,
 }
 .search-console-bar-dropdown-input {
   max-width: 190px;
+}
+.search-console-bar-dropdown-textinput {
+  height: 55px;
+  border: none;
+}
+.search-console-bar-dropdown-textinput:focus-visible {
+  outline: none;
+}
+.search-console-bar-dropdown-textinput::placeholder {
+  color: #212529;
 }
 .search-console-bar-dropdown .custom-select .select2-container--bootstrap-5 .select2-selection {
   border: none;

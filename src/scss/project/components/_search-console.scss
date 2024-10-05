@@ -9,7 +9,7 @@
   &-wrapper {
     background-color: #fff;
     border-radius: 50px;
-    height: 76px;
+    height: 75px;
     padding: 10px;
     position: relative;
     z-index: 1;
@@ -84,6 +84,19 @@
 
       &-input {
         max-width: 190px;
+      }
+
+      &-textinput {
+        height: 55px;
+        border: none;
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $gen-color;
+        }
       }
 
       .custom-select .select2-container--bootstrap-5 .select2-selection {
