@@ -11891,6 +11891,7 @@ For PUL: If you need to reduce the stylesheet file size delete de above lines an
 body {
   font-size: 15px;
   line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container-xxxl {
@@ -12149,10 +12150,6 @@ h1,
   }
 }
 
-body.nav-is-open {
-  overflow: hidden;
-}
-
 .header {
   background-color: #fff;
   padding: 15px 0;
@@ -12233,6 +12230,11 @@ body.nav-is-open {
   width: 11px;
   height: 10px;
 }
+@media (max-width: 991.98px) {
+  .language-selector .dropdown-toggle::after {
+    background-image: url("../assets/images/angle-down-regular-white.svg");
+  }
+}
 .language-selector .dropdown-toggle:hover {
   color: #6f6f6f;
 }
@@ -12247,13 +12249,26 @@ body.nav-is-open {
 }
 
 .hamburger,
-.navigation-background {
+.mobile-extra {
   display: none;
 }
 
 @media (max-width: 991.98px) {
+  body {
+    overflow-x: hidden;
+  }
+  .mobile-extra {
+    display: block;
+    padding: 20px 0;
+    background-color: #eef1fb;
+    flex: 1;
+  }
   .header {
     padding-top: 55px;
+  }
+  .logo {
+    position: relative;
+    z-index: 1501;
   }
   .hamburger {
     display: flex;
@@ -12265,8 +12280,7 @@ body.nav-is-open {
     width: 50px;
     position: absolute;
     top: 49px;
-    right: 20px;
-    border-radius: 50%;
+    right: 5px;
     z-index: 1600;
     text-align: center;
     cursor: pointer;
@@ -12296,60 +12310,43 @@ body.nav-is-open {
   .hamburger-icon::after {
     top: 0.5rem;
   }
-  .navigation-background {
-    display: block;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    position: fixed;
-    top: 54px;
-    right: 25px;
-    background-image: radial-gradient(circle, #495057, #343a40, #212529);
-    z-index: 1150;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  .navigation-background.nav-bg-out {
-    display: none;
-  }
   .nav-links-main-wrapper {
     height: 100vh;
+    height: 100dvh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1500;
-    opacity: 0;
-    width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    left: -100%;
+    width: 100%;
+    transition: transform 0.5s ease;
+    background-color: #fff;
+    transform: translateX(-100%);
+    will-change: transform;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
   }
   .nav-links-main-wrapper .nav-links-item {
-    margin: 0 15px;
+    margin: 0;
   }
   .nav-links-main-wrapper .nav-links-item a {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 300;
-    padding: 10px 20px;
-    color: #fff;
+    display: block;
+    padding: 10px 12px;
     text-decoration: none;
     text-transform: uppercase;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-    background-size: 245%;
-    transition: all 0.4s;
-  }
-  .nav-links-main-wrapper .nav-links-item a:hover, .nav-links-main-wrapper .nav-links-item a:active {
-    background-position: 100%;
-    color: #050b20;
+    position: relative;
   }
   .nav-links-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 130px;
+    padding-bottom: 20px;
     list-style: none;
-    text-align: center;
     width: 100%;
     flex-direction: column;
+    align-items: normal;
+  }
+  .nav-links-main-extra {
+    flex-direction: column;
+    align-items: normal;
   }
   .nav-links-utils {
     position: absolute;
@@ -12359,6 +12356,7 @@ body.nav-is-open {
     height: 40px;
     justify-content: end;
     background-color: #212529;
+    padding-right: 15px;
   }
   .nav-links-utils .nav-links-item a,
   .nav-links-utils .language-selector .dropdown-toggle {
@@ -12366,6 +12364,9 @@ body.nav-is-open {
   }
   .nav-links-utils .nav-links-item .dropdown-item {
     color: #212529;
+  }
+  .nav-is-open {
+    overflow: hidden;
   }
   .nav-open .hamburger .hamburger-icon {
     background-color: transparent;
@@ -12378,15 +12379,8 @@ body.nav-is-open {
     top: 0;
     transform: rotate(-135deg);
   }
-  .nav-open .navigation-background {
-    transform: scale(80);
-    top: 54px;
-    right: 25px;
-  }
   .nav-open .nav-links-main-wrapper {
-    opacity: 1;
-    width: 100%;
-    left: 0;
+    transform: translateX(0);
   }
 }
 .hero {
@@ -12404,7 +12398,7 @@ body.nav-is-open {
 }
 
 .search-console {
-  max-width: 925px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .search-console-full {
@@ -12474,7 +12468,17 @@ body.nav-is-open {
   flex: 1;
   height: 100%;
   padding-right: 1px;
-  max-width: 210px;
+  max-width: 220px;
+}
+.search-console-bar-dropdown-select {
+  max-width: 240px;
+}
+.search-console-bar-dropdown-input {
+  max-width: 190px;
+}
+.search-console-bar-dropdown .custom-select .select2-container--bootstrap-5 .select2-selection {
+  border: none;
+  box-shadow: none;
 }
 @media (max-width: 767.98px) {
   .search-console-bar-dropdown {
@@ -12484,7 +12488,7 @@ body.nav-is-open {
     width: 100%;
   }
 }
-.search-console-bar-dropdown:first-child .dropdown-toggle {
+.search-console-bar-dropdown:first-child .custom-select .select2-container--bootstrap-5 .select2-selection {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
@@ -12696,6 +12700,109 @@ body.nav-is-open {
   }
 }
 
+.custom-select {
+  position: relative;
+}
+.custom-select .select2-container {
+  width: 100% !important;
+}
+.custom-select .select2-dropdown {
+  border-color: #f2f2f2;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection {
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 36px;
+  padding-top: 6px;
+  background-image: url("../assets/images/angle-down-regular.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem top 20px;
+  background-size: 16px 15px;
+  height: 55px;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple {
+  border-radius: 12px;
+  display: flex;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__clear {
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  background-size: 9px 9px;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered {
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: normal;
+  overflow: visible;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  margin: 0;
+  font-size: 13px;
+  max-width: 140px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  box-shadow: inset -5px 0 0 0 white;
+  right: 0;
+  top: 0;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(2), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(3), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(4), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(5), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(6), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(7), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(8), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(9), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(10), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(11), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(12), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(13), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(14), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(15), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(16), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(17), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(18), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(19), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(20), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(21), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(22), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(23), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(24), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(25), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(26), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(27), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(28), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(29), .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice:nth-of-type(30) {
+  display: none;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+  background-size: 9px 9px;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-search {
+  width: auto;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-search .select2-search__field {
+  width: auto !important;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-search .select2-search__field::placeholder {
+  color: #212529;
+}
+.custom-select .select2-container--bootstrap-5.select2-container--open .select2-selection {
+  background-image: none;
+}
+
+.custom-select-count {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option.select2-results__option--selected,
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option[aria-selected=true]:not(.select2-results__option--highlighted) {
+  background-color: #cecece;
+  color: #212529;
+}
+
+.select2-dropdown {
+  border-color: #f2f2f2 !important;
+}
+
 .component-banners {
   margin-top: -200px;
 }
@@ -12748,7 +12855,6 @@ body.nav-is-open {
 .banner-box-content-title {
   font-size: 30px;
   margin-bottom: 20px;
-  font-weight: 300;
 }
 @media (max-width: 767.98px) {
   .banner-box-content-title {
@@ -12758,7 +12864,6 @@ body.nav-is-open {
 }
 .banner-box-content-text {
   margin-bottom: 20px;
-  font-weight: 300;
 }
 @media (max-width: 767.98px) {
   .banner-box-content-text {
@@ -13013,10 +13118,8 @@ body.nav-is-open {
 .card-car-banner-content-title {
   font-size: 36px;
   margin-bottom: 15px;
-  font-weight: 300;
 }
 .card-car-banner-content-text {
-  font-weight: 300;
   margin-bottom: 15px;
 }
 .card-car-content {
@@ -13935,6 +14038,11 @@ button.swiper-pagination-bullet {
   gap: 15px;
   flex-wrap: wrap;
 }
+@media (max-width: 380px) {
+  .dealers-list {
+    gap: 10px;
+  }
+}
 .dealers-list-item {
   flex-basis: 225px;
   flex-shrink: 0;
@@ -13943,6 +14051,18 @@ button.swiper-pagination-bullet {
   border-radius: 12px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
+}
+@media (max-width: 500px) {
+  .dealers-list-item {
+    flex-basis: 170px;
+    min-height: 170px;
+  }
+}
+@media (max-width: 380px) {
+  .dealers-list-item {
+    flex-basis: 155px;
+    min-height: 155px;
+  }
 }
 .dealers-list-item:hover {
   transform: translateY(-3px);
@@ -13970,6 +14090,11 @@ button.swiper-pagination-bullet {
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
+}
+@media (max-width: 500px) {
+  .dealers-list-item figure img {
+    max-width: 100%;
+  }
 }
 .dealers-list-item figcaption {
   font-size: 16px;
@@ -14183,6 +14308,9 @@ button.swiper-pagination-bullet {
     display: none;
     padding-left: 15px;
     margin-bottom: 20px;
+  }
+  .footer-list-block {
+    display: block;
   }
 }
 .footer-list li {

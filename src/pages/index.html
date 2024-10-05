@@ -7,6 +7,14 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Plus Auto</title>
 
+    <link
+      href="https://dev.plus-auto.ro/assets/css/select2/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://dev.plus-auto.ro/assets/css/select2/select2-bootstrap-5.min.css"
+      rel="stylesheet"
+    />
     <link href="../css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -41,6 +49,22 @@
                   <a href="#" title="">Autoutilitare</a>
                 </li>
               </ul>
+              <div class="mobile-extra">
+                <ul class="list-unstyled nav-links nav-links-main-extra">
+                  <li class="nav-links-item">
+                    <a href="#" title="">Rezerva masina online</a>
+                  </li>
+                  <li class="nav-links-item">
+                    <a href="#" title="">Configurator</a>
+                  </li>
+                  <li class="nav-links-item">
+                    <a href="#" title="">Descopera gama completa si preturi</a>
+                  </li>
+                  <li class="nav-links-item">
+                    <a href="#" title="">Solicita o oferta personalizata</a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <ul class="list-unstyled nav-links nav-links-utils">
@@ -88,7 +112,6 @@
       >
         <span class="hamburger-icon">&nbsp;</span>
       </button>
-      <div class="navigation-background" role="presentation">&nbsp;</div>
     </header>
     <main id="content" class="main">
       <section class="hero hero-home text-center">
@@ -105,7 +128,9 @@
               <span>Schimba modul de cautare</span>
             </button>
             <div class="search-console-wrapper">
-              <div class="search-console-bar search-console-bar-advanced">
+              <div
+                class="search-console-bar search-console-bar-advanced d-none"
+              >
                 <div class="search-console-bar-dropdown">
                   <button
                     class="dropdown-toggle"
@@ -222,40 +247,51 @@
                   </button>
                 </div>
               </div>
-              <div class="search-console-bar search-console-bar-classic d-none">
-                <div class="search-console-bar-dropdown">
-                  <button
-                    class="dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Used
-                  </button>
-                  <ul class="dropdown-menu shadow-sm">
-                    <li><a class="dropdown-item" href="#">Audi</a></li>
-                    <li><a class="dropdown-item" href="#">BMW</a></li>
-                    <li><a class="dropdown-item" href="#">Skoda</a></li>
-                    <li><a class="dropdown-item" href="#">Opel</a></li>
-                  </ul>
+              <div class="search-console-bar search-console-bar-classic">
+                <div
+                  class="search-console-bar-dropdown search-console-bar-dropdown-select"
+                >
+                  <div class="custom-select">
+                    <select
+                      id="js-brand-select"
+                      class="form-control form-control-lg select2-hidden-accessible select2-general"
+                      multiple
+                      placeholder="Marca"
+                      data-allow-clear="1"
+                    >
+                      <option value="0">BMW</option>
+                      <option value="1">Mercedes-Benz</option>
+                      <option value="2">Maybach</option>
+                      <option value="3">Rolls Royce</option>
+                      <option value="4">Audi</option>
+                      <option value="5">Daimler Chrysler Maybach</option>
+                    </select>
+                    <span class="bg-danger custom-select-count d-none">0</span>
+                  </div>
                 </div>
-                <div class="search-console-bar-dropdown">
-                  <button
-                    class="dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Brand
-                  </button>
-                  <ul class="dropdown-menu shadow-sm">
-                    <li><a class="dropdown-item" href="#">Audi</a></li>
-                    <li><a class="dropdown-item" href="#">BMW</a></li>
-                    <li><a class="dropdown-item" href="#">Skoda</a></li>
-                    <li><a class="dropdown-item" href="#">Opel</a></li>
-                  </ul>
+                <div
+                  class="search-console-bar-dropdown search-console-bar-dropdown-select"
+                >
+                  <div class="custom-select">
+                    <select
+                      id="js-model-select"
+                      class="form-control form-control-lg select2-hidden-accessible select2-general"
+                      multiple
+                      placeholder="Model"
+                      data-allow-clear="1"
+                    >
+                      <option value="0">Series 1</option>
+                      <option value="1">Series 2</option>
+                      <option value="2">Series 3</option>
+                      <option value="3">Series 5</option>
+                      <option value="4">Series 7</option>
+                    </select>
+                    <span class="bg-danger custom-select-count d-none">0</span>
+                  </div>
                 </div>
-                <div class="search-console-bar-dropdown">
+                <div
+                  class="search-console-bar-dropdown search-console-bar-dropdown-input"
+                >
                   <button
                     class="dropdown-toggle"
                     type="button"
@@ -270,7 +306,9 @@
                     <li><a class="dropdown-item" href="#">Octavia</a></li>
                   </ul>
                 </div>
-                <div class="search-console-bar-dropdown">
+                <div
+                  class="search-console-bar-dropdown search-console-bar-dropdown-input"
+                >
                   <button
                     class="dropdown-toggle"
                     type="button"
@@ -1525,7 +1563,7 @@
           </div>
           <div class="col-md-4 col-lg-3">
             <h5 class="footer-title js-footer-toggle">Mãrci</h5>
-            <ul class="list-unstyled footer-list">
+            <ul class="list-unstyled footer-list footer-list-block">
               <li>
                 <a href="https://dev.plus-auto.ro/autoturisme/bmw/"> BMW </a>
               </li>
@@ -1739,6 +1777,60 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/standalone/swiper.min.js"></script>
+    <script src="https://dev.plus-auto.ro/assets/js/select2.min.js"></script>
     <script src="../js/prod/main.js"></script>
+    <script>
+      // Initierea selectului respectiv
+      $("#js-brand-select").select2({
+        closeOnSelect: false,
+        placeholder: $("#js-brand-select").attr("placeholder"),
+        allowClear: true,
+        tags: true,
+        theme: "bootstrap-5",
+      });
+
+      // Initierea selectului respectiv
+      $("#js-model-select").select2({
+        closeOnSelect: false,
+        placeholder: $("#js-model-select").attr("placeholder"),
+        allowClear: true,
+        tags: true,
+        theme: "bootstrap-5",
+      });
+
+      // Logica de badge count
+      $(".select2-general").on("change", function () {
+        // Get the selected values
+        var selectedValues = $(this).val();
+
+        // Find the corresponding badge
+        var badge = $(this).parent().find(".custom-select-count");
+
+        // Check if any values are selected
+        if (selectedValues) {
+          var count = selectedValues.length;
+
+          // Show or hide the badge based on the count
+          if (count > 1) {
+            // Only show if more than one option is selected
+            badge.removeClass("d-none");
+            badge.text(count - 1).show();
+          } else {
+            badge.hide();
+          }
+        } else {
+          // Hide the badge if no options are selected
+          badge.hide();
+        }
+      });
+
+      // Logica de a genera lista de selectate in ordinea selectata ca sa pot ascunde din css pin-urile extra
+      $(".select2-general").on("select2:select", function (evt) {
+        var elm = evt.params.data.element;
+        $elm = $(elm);
+        $(this).append($elm);
+        $(this).trigger("change.select2");
+      });
+    </script>
   </body>
 </html>

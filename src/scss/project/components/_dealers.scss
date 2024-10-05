@@ -5,6 +5,10 @@
   gap: 15px;
   flex-wrap: wrap;
 
+  @media (max-width: 380px) {
+    gap: 10px;
+  }
+
   &-item {
     flex-basis: 225px;
     flex-shrink: 0;
@@ -13,6 +17,16 @@
     border-radius: $border-radius;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
+
+    @media (max-width: 500px) {
+      flex-basis: 170px;
+      min-height: 170px;
+    }
+
+    @media (max-width: 380px) {
+      flex-basis: 155px;
+      min-height: 155px;
+    }
 
     &:hover {
       transform: translateY(-3px);
@@ -42,6 +56,10 @@
         height: auto;
         margin-top: auto;
         margin-bottom: auto;
+
+        @media (max-width: 500px) {
+          max-width: 100%;
+        }
       }
     }
 

@@ -1,5 +1,5 @@
 .search-console {
-  max-width: 925px;
+  max-width: 960px;
   margin: 0 auto;
 
   &-full {
@@ -76,7 +76,20 @@
       flex: 1;
       height: 100%;
       padding-right: 1px;
-      max-width: 210px;
+      max-width: 220px;
+
+      &-select {
+        max-width: 240px;
+      }
+
+      &-input {
+        max-width: 190px;
+      }
+
+      .custom-select .select2-container--bootstrap-5 .select2-selection {
+        border: none;
+        box-shadow: none;
+      }
 
       @include media-breakpoint-down(md) {
         max-width: none;
@@ -85,7 +98,10 @@
         width: 100%;
       }
 
-      &:first-child .dropdown-toggle {
+      &:first-child
+        .custom-select
+        .select2-container--bootstrap-5
+        .select2-selection {
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
       }
