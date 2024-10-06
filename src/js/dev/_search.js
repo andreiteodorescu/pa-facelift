@@ -21,3 +21,7 @@ $(".js-search-shuffle").on("click", function () {
   // Add 'search-bar-active' to the element that just became visible
   $currentlyHidden.removeClass("d-none").addClass("search-bar-active");
 });
+
+if ($(".search-console-wrapper").length) {
+  $("body").addClass("search-console-onpage");
+}

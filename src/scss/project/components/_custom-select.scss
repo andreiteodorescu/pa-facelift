@@ -164,5 +164,9 @@
 }
 
 .select2-dropdown {
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.045), 0px 1px 8px rgba(0, 0, 0, 0.045);
+}
+
+.search-console-onpage .select2-dropdown {
   border-color: $grey-extralight !important;
 }

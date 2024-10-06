@@ -1,0 +1,75 @@
+/* Styling; */
+.noUi-background {
+  background: #d6d7d9;
+}
+
+/* Handles and cursors;
+  */
+.noUi-draggable {
+  cursor: w-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+  cursor: n-resize;
+}
+
+/* Disabled state; */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+  background: #b8b8b8;
+}
+
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+.slider-labels .caption {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#slider-range-value01::after,
+#slider-range-value1::after {
+  margin: 0 2px;
+}
+
+.noUi-base {
+  background: lightgrey;
+}
+
+.noUi-connect {
+  background: rgba(55, 59, 57, 1);
+}
+
+.noUi-target {
+  height: 3px;
+  border: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid rgba(104, 106, 111, 1);
+  cursor: pointer;
+  top: -14px;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+
+  &-lower {
+    right: 0;
+  }
+
+  &-upper {
+    right: 0;
+  }
+}
+
+.noUi-horizontal .noUi-origin {
+  width: calc(100% - 28px);
+}
