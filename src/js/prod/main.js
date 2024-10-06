@@ -112,6 +112,23 @@ $(".hamburger").on("click", function () {
 });
 "use strict";
 
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 300) {
+    $("#scrollToTopBtn").fadeIn();
+  } else {
+    $("#scrollToTopBtn").fadeOut();
+  }
+});
+
+// Scroll to top when the button is clicked
+$("#scrollToTopBtn").click(function () {
+  $("html, body").animate({
+    scrollTop: 0
+  }, "fast");
+  return false;
+});
+"use strict";
+
 $(".search-console-bar-classic .search-console-bar-dropdown").last().addClass("search-console-bar-dropdown-last");
 $(".js-search-shuffle").on("click", function () {
   var $searchConsoleWrapper = $(".search-console-wrapper");

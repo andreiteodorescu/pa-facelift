@@ -48,3 +48,33 @@ body {
     height: 12px;
   }
 }
+
+.scroll-to-top {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $red;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  display: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:active {
+    background-color: $red-hover;
+
+    svg {
+      transform: translateY(-2px);
+    }
+  }
+
+  svg {
+    fill: #fff;
+    width: 17px;
+    height: 17px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
