@@ -11979,6 +11979,10 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+.content-interior {
+  padding: 30px 0 0;
+}
+
 b,
 strong {
   font-weight: 600;
@@ -12157,6 +12161,18 @@ h1,
 }
 .btn-arrow:active svg, .btn-arrow:hover svg {
   transform: translateX(2px);
+}
+
+.form-check-input {
+  margin-top: 2px;
+}
+.form-check-input:checked {
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.form-check-label {
+  cursor: pointer;
 }
 
 .visually-hidden-focusable:focus,
@@ -12569,6 +12585,9 @@ h1,
   border: none;
   box-shadow: none;
 }
+.search-console-bar-dropdown .custom-select .select2-container--bootstrap-5 .select2-search .select2-search__field::placeholder {
+  color: #212529;
+}
 @media (max-width: 991.98px) {
   .search-console-bar-dropdown {
     max-width: none;
@@ -12877,8 +12896,18 @@ h1,
 .custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-search .select2-search__field {
   width: auto !important;
 }
-.custom-select .select2-container--bootstrap-5 .select2-selection--multiple .select2-search .select2-search__field::placeholder {
-  color: #212529;
+.custom-select .select2-container--bootstrap-5 .select2-selection--single {
+  border-radius: 12px;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.custom-select .select2-container--bootstrap-5 .select2-selection--single .select2-selection__clear {
+  width: 14px;
+  height: 14px;
+  background-size: 9px 9px;
 }
 .custom-select .select2-container--bootstrap-5.select2-container--open .select2-selection {
   background-image: none;
@@ -12986,13 +13015,13 @@ h1,
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 .vehicle-types-list-item {
-  flex-basis: 145px;
+  flex-basis: 130px;
   flex-shrink: 0;
-  min-height: 140px;
+  min-height: 130px;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -13008,16 +13037,19 @@ h1,
 .vehicle-types-list-item a {
   display: flex;
   flex-direction: column;
-  padding: 30px 5px 10px;
+  padding: 15px 10px 20px;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   height: 100%;
   transition: background-color 0.3s ease-in-out;
 }
 .vehicle-types-list-item a svg {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 20px;
   flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .vehicle-types-list-item-title {
   font-size: 18px;
@@ -14326,6 +14358,68 @@ button.swiper-pagination-bullet {
 }
 .article-card figcaption a:hover, .article-card figcaption a:active {
   color: #6f6f6f;
+}
+
+.component-car-listing {
+  display: flex;
+  gap: 24px;
+}
+
+.filters-wrapper {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.filters-panel {
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  padding: 20px;
+}
+.filters-panel-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.filters-panel-checklist {
+  margin: 0;
+}
+.filters-panel-checklist-icons .form-check-label {
+  display: flex;
+}
+.filters-panel-checklist-icons .form-check-label svg {
+  width: 37px;
+  height: 19px;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.filtered-car-list {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.breadcrumb li {
+  margin-right: 20px;
+  position: relative;
+}
+.breadcrumb li a {
+  text-decoration: none;
+  color: #c03a2e;
+}
+.breadcrumb li a:hover, .breadcrumb li a:active {
+  color: #e6493a;
+}
+.breadcrumb li::before {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: -14px;
+}
+.breadcrumb li:last-child {
+  margin-right: 0;
+}
+.breadcrumb li:last-child::before {
+  display: none;
 }
 
 .social-media-links {

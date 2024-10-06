@@ -1,0 +1,43 @@
+.component-car-listing {
+  display: flex;
+  gap: 24px;
+}
+
+.filters-wrapper {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.filters-panel {
+  border: 1px solid $grey-extralight-2;
+  border-radius: $border-radius;
+  padding: 20px;
+
+  &-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &-checklist {
+    margin: 0;
+
+    &-icons {
+      .form-check-label {
+        display: flex;
+
+        svg {
+          width: 37px;
+          height: 19px;
+          margin-right: 8px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.filtered-car-list {
+  flex: 0 0 auto;
+  width: 75%;
+}

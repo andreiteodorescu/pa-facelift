@@ -1,0 +1,12 @@
+.form-check-input {
+  margin-top: 2px;
+
+  &:checked {
+    background-color: $gen-color;
+    border-color: $gen-color;
+  }
+}
+
+.form-check-label {
+  cursor: pointer;
+}

@@ -111,9 +111,15 @@
         }
       }
 
-      .custom-select .select2-container--bootstrap-5 .select2-selection {
-        border: none;
-        box-shadow: none;
+      .custom-select .select2-container--bootstrap-5 {
+        .select2-selection {
+          border: none;
+          box-shadow: none;
+        }
+
+        .select2-search .select2-search__field::placeholder {
+          color: $gen-color;
+        }
       }
 
       @include media-breakpoint-down(lg) {

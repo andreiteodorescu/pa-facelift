@@ -104,11 +104,23 @@
 
         .select2-search__field {
           width: auto !important;
-
-          &::placeholder {
-            color: $gen-color;
-          }
         }
+      }
+    }
+
+    .select2-selection--single {
+      border-radius: $border-radius;
+
+      .select2-selection__rendered {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .select2-selection__clear {
+        width: 14px;
+        height: 14px;
+        background-size: 9px 9px;
       }
     }
 

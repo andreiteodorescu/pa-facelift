@@ -109,1333 +109,165 @@
       </button>
     </header>
     <main id="content" class="main">
-      <section class="hero hero-home text-center">
+      <div class="content-interior">
         <div class="container-general">
-          <h1 class="main-title mb-5">Găsește autoturismul perfect</h1>
-          <div class="search-console">
-            <button
-              type="button"
-              class="btn btn-small btn-pill btn-primary btn-shuffle mb-2 js-search-shuffle"
-            >
-              <svg>
-                <use href="../assets/images/sprite.svg#icon-shuffle"></use>
-              </svg>
-              <span>Schimba modul de cautare</span>
-            </button>
-            <div class="search-console-wrapper">
-              <div
-                class="search-console-bar search-console-bar-advanced d-none"
-              >
-                <div class="search-console-bar-dropdown">
-                  <button
-                    class="dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Autoturisme
-                  </button>
-                  <ul class="dropdown-menu shadow-sm">
-                    <li><a class="dropdown-item" href="#">Autoturisme</a></li>
-                    <li><a class="dropdown-item" href="#">Motociclete</a></li>
-                    <li><a class="dropdown-item" href="#">Autoutilitare</a></li>
-                    <li><a class="dropdown-item" href="#">Altele</a></li>
-                  </ul>
-                </div>
-                <div class="search-console-smart-field">
-                  <div class="search-box">
-                    <input
-                      type="search"
-                      autocomplete="off"
-                      id="intelligent-search"
-                      placeholder="Mercedes GLE Benzină"
-                      class="show-search"
-                      name="name"
-                      tabindex="2"
-                      value=""
-                      aria-required="true"
-                      required
-                    />
+          <ul class="list-unstyled breadcrumb">
+            <li>
+              <a href="/">Acasă</a>
+            </li>
+            <li>
+              <a href="https://dev.plus-auto.ro/autoturisme/"> Autoturisme </a>
+            </li>
+          </ul>
+          <h1 class="secondary-title mb-4">Autoturisme</h1>
+          <div class="component-car-listing">
+            <aside class="filters-wrapper">
+              <div class="filters-panel">
+                <div class="row">
+                  <div class="col-lg-12 mb-3">
+                    <h4 class="filters-panel-title">Disponibilitate</h4>
+                    <div class="custom-select">
+                      <select
+                        id="js-salestype-select"
+                        class="form-control form-control-lg select2-hidden-accessible"
+                        placeholder="Selecteaza"
+                      >
+                        <option value="">Toate</option>
+                        <option value="0">La comanda</option>
+                        <option value="1">Pe stoc</option>
+                      </select>
+                    </div>
                   </div>
-                  <div
-                    class="box-content-search shadow-sm"
-                    id="box-content-search"
-                  >
-                    <ul class="list-unstyled box-car-search">
+                  <div class="col-lg-12 mb-3">
+                    <h4 class="filters-panel-title">Marca</h4>
+                    <div class="custom-select">
+                      <select
+                        id="js-brand-select"
+                        class="form-control form-control-lg select2-hidden-accessible select2-general"
+                        multiple
+                        placeholder="Selecteaza"
+                        data-allow-clear="1"
+                      >
+                        <option value="0">BMW</option>
+                        <option value="1">Mercedes-Benz</option>
+                        <option value="2">Maybach</option>
+                        <option value="3">Rolls Royce</option>
+                        <option value="4">Audi</option>
+                        <option value="5">Daimler Chrysler Maybach</option>
+                      </select>
+                      <span class="bg-danger custom-select-count d-none"
+                        >0</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <h4 class="filters-panel-title">Model</h4>
+                    <div class="custom-select">
+                      <select
+                        id="js-model-select"
+                        class="form-control form-control-lg select2-hidden-accessible select2-general"
+                        multiple
+                        placeholder="Model"
+                        data-allow-clear="1"
+                        disabled
+                      >
+                        <option value="0">Series 1</option>
+                        <option value="1">Series 2</option>
+                        <option value="2">Series 3</option>
+                        <option value="3">Series 5</option>
+                        <option value="4">Series 7</option>
+                      </select>
+                      <span class="bg-danger custom-select-count d-none"
+                        >0</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <h4 class="filters-panel-title">Combustibil</h4>
+                    <div class="custom-select">
+                      <select
+                        id="js-fuel-select"
+                        class="form-control form-control-lg select2-hidden-accessible"
+                        placeholder="Selecteaza"
+                      >
+                        <option value="0">Benzina</option>
+                        <option value="1">Diesel</option>
+                        <option value="2">Electric</option>
+                        <option value="3">Etanol</option>
+                      </select>
+                      <span class="bg-danger custom-select-count d-none"
+                        >0</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <h4 class="filters-panel-title">Caroserie</h4>
+                    <ul
+                      class="list-unstyled filters-panel-checklist filters-panel-checklist-icons"
+                    >
                       <li>
-                        <a
-                          href="https://dev.plus-auto.ro/anunt/audi-sq8-e-tron-89492/"
-                          class="car-search-item"
-                        >
-                          <div class="box-car-search-img">
-                            <img
-                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94464/94464-1827028-thumbnail.webp"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="box-car-search-info">
-                            <p class="box-car-search-name">Audi SQ8 e-tron</p>
-                            <span class="box-car-search-price">63.000 €</span>
-                          </div>
-                        </a>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="carCheck1"
+                          />
+                          <label class="form-check-label" for="carCheck1">
+                            <svg>
+                              <use
+                                href="../assets/images/sprite.svg#icon-car-cabrio"
+                              ></use>
+                            </svg>
+                            Cabrio
+                          </label>
+                        </div>
                       </li>
                       <li>
-                        <a
-                          href="https://dev.plus-auto.ro/anunt/audi-a7-89473/"
-                          class="car-search-item"
-                        >
-                          <div class="box-car-search-img">
-                            <img
-                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94443/94443-1826681-thumbnail.webp"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="box-car-search-info">
-                            <p class="box-car-search-name">Audi A7</p>
-                            <span class="box-car-search-price">41.000 €</span>
-                          </div>
-                        </a>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="carCheck2"
+                          />
+                          <label class="form-check-label" for="carCheck2">
+                            <svg>
+                              <use
+                                href="../assets/images/sprite.svg#icon-car-sport"
+                              ></use>
+                            </svg>
+                            Sport
+                          </label>
+                        </div>
                       </li>
                       <li>
-                        <a
-                          href="https://dev.plus-auto.ro/anunt/audi-a3-35-tfsi-sportback-2022-garantie-89444/"
-                          class="car-search-item"
-                        >
-                          <div class="box-car-search-img">
-                            <img
-                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/94412/94412-1826061-thumbnail.webp"
-                              alt="img"
-                            />
-                          </div>
-                          <div class="box-car-search-info">
-                            <p class="box-car-search-name">
-                              AUDI A3 - 35 TFSI SPORTBACK 2022 - GARAN...
-                            </p>
-                            <span class="box-car-search-price">23.000 €</span>
-                          </div>
-                        </a>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="carCheck3"
+                          />
+                          <label class="form-check-label" for="carCheck3">
+                            <svg>
+                              <use
+                                href="../assets/images/sprite.svg#icon-car-sedan"
+                              ></use>
+                            </svg>
+                            Compacta
+                          </label>
+                        </div>
                       </li>
                     </ul>
-                    <span class="intelligent-search-info">
-                      Am filtrat <strong>1193</strong> anunturi din
-                      <strong>12518</strong> total anunturi <br />
-                      Le afisam pe cele mai relevante: <strong>12</strong>
-                    </span>
                   </div>
-                </div>
-                <div class="search-console-submit">
-                  <button
-                    type="submit"
-                    data-total-results="12454"
-                    class="btn btn-big btn-pill btn-primary btn-search"
-                  >
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-magnifying-glass"
-                      ></use>
-                    </svg>
-                    <span>
-                      Caută
-                      <strong id="isearch-total-results">12454</strong>
-                      Autoturisme
-                    </span>
-                  </button>
                 </div>
               </div>
-              <div class="search-console-bar search-console-bar-classic">
-                <div
-                  class="search-console-bar-dropdown search-console-bar-dropdown-select"
-                >
-                  <div class="custom-select">
-                    <select
-                      id="js-brand-select"
-                      class="form-control form-control-lg select2-hidden-accessible select2-general"
-                      multiple
-                      placeholder="Marca"
-                      data-allow-clear="1"
-                    >
-                      <option value="0">BMW</option>
-                      <option value="1">Mercedes-Benz</option>
-                      <option value="2">Maybach</option>
-                      <option value="3">Rolls Royce</option>
-                      <option value="4">Audi</option>
-                      <option value="5">Daimler Chrysler Maybach</option>
-                    </select>
-                    <span class="bg-danger custom-select-count d-none">0</span>
-                  </div>
-                </div>
-                <div
-                  class="search-console-bar-dropdown search-console-bar-dropdown-select"
-                >
-                  <div class="custom-select">
-                    <select
-                      id="js-model-select"
-                      class="form-control form-control-lg select2-hidden-accessible select2-general"
-                      multiple
-                      placeholder="Model"
-                      data-allow-clear="1"
-                    >
-                      <option value="0">Series 1</option>
-                      <option value="1">Series 2</option>
-                      <option value="2">Series 3</option>
-                      <option value="3">Series 5</option>
-                      <option value="4">Series 7</option>
-                    </select>
-                    <span class="bg-danger custom-select-count d-none">0</span>
-                  </div>
-                </div>
-                <div
-                  class="search-console-bar-dropdown search-console-bar-dropdown-input"
-                >
-                  <input
-                    class="search-console-bar-dropdown-textinput"
-                    type="text"
-                    placeholder="Pret (pana la)"
-                  />
-                </div>
-                <div
-                  class="search-console-bar-dropdown search-console-bar-dropdown-input"
-                >
-                  <input
-                    class="search-console-bar-dropdown-textinput"
-                    type="text"
-                    placeholder="An prima inmatriculare (de la)"
-                  />
-                </div>
-                <div class="search-console-submit">
-                  <button
-                    type="submit"
-                    data-total-results="12454"
-                    class="btn btn-big btn-pill btn-primary btn-search btn-search-circle"
-                  >
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-magnifying-glass"
-                      ></use>
-                    </svg>
-                    <span class="d-inline-block d-lg-none ms-1">Cauta</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </aside>
+            <section class="filtered-car-list">Car list</section>
           </div>
         </div>
-      </section>
-      <section class="component-banners">
-        <div class="container-general">
-          <div class="row gap-4 gap-sm-0">
-            <div class="col-sm-6">
-              <div class="banner-box">
-                <figure class="banner-box-image">
-                  <img src="../assets/images/temporary/buy-car.webp" alt="" />
-                </figure>
-                <div class="banner-box-content">
-                  <h3 class="banner-box-content-title">
-                    Cauti o masina second-hand?
-                  </h3>
-                  <div class="banner-box-content-text">
-                    We are committed to providing our customers with exceptional
-                    service.
-                  </div>
-                  <a class="btn btn-arrow btn-light" href="#" title="">
-                    <span>Get started</span>
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-arrow-right"
-                      ></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="banner-box">
-                <figure class="banner-box-image">
-                  <img src="../assets/images/temporary/sell-car.webp" alt="" />
-                </figure>
-                <div class="banner-box-content">
-                  <h3 class="banner-box-content-title">
-                    Cauti sa vinzi o masina?
-                  </h3>
-                  <div class="banner-box-content-text">
-                    We are committed to providing our customers with exceptional
-                    service.
-                  </div>
-                  <a class="btn btn-arrow btn-light" href="#" title="">
-                    <span>Get started</span>
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-arrow-right"
-                      ></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="component-block text-center">
-        <div class="container-general">
-          <h2 class="secondary-title mb-5">Cautã dupa tip</h2>
-          <ul class="list-unstyled vehicle-types-list observe">
-            <li class="vehicle-types-list-item">
-              <a href="#" title="">
-                <svg>
-                  <use href="../assets/images/sprite.svg#icon-race-car"></use>
-                </svg>
-                <h5 class="vehicle-types-list-item-title">Premium</h5>
-              </a>
-            </li>
-            <li class="vehicle-types-list-item">
-              <a href="#" title="">
-                <svg>
-                  <use href="../assets/images/sprite.svg#icon-suv"></use>
-                </svg>
-                <h5 class="vehicle-types-list-item-title">SUV</h5>
-              </a>
-            </li>
-            <li class="vehicle-types-list-item">
-              <a href="#" title="">
-                <svg>
-                  <use href="../assets/images/sprite.svg#icon-sedan"></use>
-                </svg>
-                <h5 class="vehicle-types-list-item-title">Sedan</h5>
-              </a>
-            </li>
-            <li class="vehicle-types-list-item">
-              <a href="#" title="">
-                <svg>
-                  <use href="../assets/images/sprite.svg#icon-hatchback"></use>
-                </svg>
-                <h5 class="vehicle-types-list-item-title">Hatchback</h5>
-              </a>
-            </li>
-            <li class="vehicle-types-list-item">
-              <a href="#" title="">
-                <svg>
-                  <use href="../assets/images/sprite.svg#icon-coupe"></use>
-                </svg>
-                <h5 class="vehicle-types-list-item-title">Coupe</h5>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="component-block">
-        <div class="container-general">
-          <h2 class="secondary-title text-center mb-5">Anunturi relevante</h2>
-
-          <ul class="nav nav-tabs custom-tabs" id="addsTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="adds-tab1"
-                data-bs-toggle="tab"
-                data-bs-target="#adds-tab1-pane"
-                type="button"
-                role="tab"
-                aria-controls="adds-tab1-pane"
-                aria-selected="true"
-              >
-                Disponibile imediat
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="adds-tab2"
-                data-bs-toggle="tab"
-                data-bs-target="#adds-tab2-pane"
-                type="button"
-                role="tab"
-                aria-controls="adds-tab2-pane"
-                aria-selected="false"
-              >
-                Disponibile la comanda
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="adds-tab3"
-                data-bs-toggle="tab"
-                data-bs-target="#adds-tab3-pane"
-                type="button"
-                role="tab"
-                aria-controls="adds-tab3-pane"
-                aria-selected="false"
-              >
-                Cele mai vizualizate
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content pt-5" id="addsTabContent">
-            <div
-              class="tab-pane fade show active"
-              id="adds-tab1-pane"
-              role="tabpanel"
-              aria-labelledby="adds-tab1"
-              tabindex="0"
-            >
-              <div class="swiper-custom-wrapper">
-                <div class="swiper js-adds-slider-1">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <div class="card-car-badge">Km putini</div>
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              95.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car-banner">
-                        <img
-                          src="../assets/images/temporary/banner-0-home.webp"
-                          alt=""
-                        />
-                        <div class="card-car-banner-content">
-                          <h3 class="card-car-banner-content-title">
-                            Nu ai gasit ce cauti?
-                          </h3>
-                          <p class="card-car-banner-content-text">
-                            Iti oferim consiliere profesionala la selectia de
-                            masini de dealeri si parcuri auto certificate
-                          </p>
-                          <a class="btn btn-secondary" href="#" title=""
-                            >Comanda masina ta</a
-                          >
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title=""
-                                >Cupra Formentor E-Hybrid Garantie</a
-                              >
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              150.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              27.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title=""
-                                >Lamborghini HURACÁN STO Sport Seat Lift Full
-                                PPF</a
-                              >
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-custom-nav">
-                  <div class="swiper-button-prev slider-1-prev"></div>
-                  <div class="swiper-button-next slider-1-next"></div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="adds-tab2-pane"
-              role="tabpanel"
-              aria-labelledby="adds-tab2"
-              tabindex="0"
-            >
-              <div class="swiper-custom-wrapper">
-                <div class="swiper js-adds-slider-2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              93.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title=""
-                                >Cupra Formentor E-Hybrid Garantie</a
-                              >
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              3.000.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title=""
-                                >Lamborghini HURACÁN STO Sport Seat Lift Full
-                                PPF</a
-                              >
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="card-car">
-                        <figure class="card-car-image">
-                          <a href="#" title="">
-                            <img
-                              width="360"
-                              height="270"
-                              src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                              alt=""
-                            />
-                          </a>
-                        </figure>
-                        <div class="card-car-content">
-                          <div class="card-car-content-info">
-                            <h4 class="card-car-content-title">
-                              <a href="#" title="">BMW X5 M50d</a>
-                            </h4>
-                            <div class="card-car-content-seller">Plus Auto</div>
-                          </div>
-                          <ul class="list-unstyled card-car-content-features">
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-speedometer"
-                                ></use>
-                              </svg>
-                              <span>107.000 km</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gasoline-pump"
-                                ></use>
-                              </svg>
-                              <span>Diesel</span>
-                            </li>
-                            <li class="card-car-content-features-item">
-                              <svg class="card-car-content-features-item-icon">
-                                <use
-                                  href="../assets/images/sprite.svg#icon-gearbox"
-                                ></use>
-                              </svg>
-                              <span>Automata</span>
-                            </li>
-                          </ul>
-                          <div class="card-car-content-action">
-                            <div class="card-car-content-action-price">
-                              77.000 &euro;
-                            </div>
-                            <a class="btn btn-arrow btn-link" href="#" title="">
-                              <span>Vezi detalii</span>
-                              <svg>
-                                <use
-                                  href="../assets/images/sprite.svg#icon-arrow-right"
-                                ></use>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-custom-nav">
-                  <div class="swiper-button-prev slider-2-prev"></div>
-                  <div class="swiper-button-next slider-2-next"></div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="adds-tab3-pane"
-              role="tabpanel"
-              aria-labelledby="adds-tab3"
-              tabindex="0"
-            >
-              Tab 3
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="component-block text-center">
-        <div class="container-general">
-          <h2 class="secondary-title mb-5">Dealeri parteneri</h2>
-          <ul class="list-unstyled dealers-list observe">
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/15-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>GMA Auto</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/15-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>Plus Auto</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/20-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>Dom Automobile</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/40-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>Car Match</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/41-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>Epick Cars</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="dealers-list-item">
-              <a href="#" title="">
-                <figure>
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/15-logo.webp"
-                    alt=""
-                  />
-                  <figcaption>RCL Auto</figcaption>
-                </figure>
-              </a>
-            </li>
-          </ul>
-          <a class="btn btn-arrow btn-outline-light mt-5" href="#" title="">
-            <span>Vezi toti dealerii</span>
-            <svg>
-              <use href="../assets/images/sprite.svg#icon-arrow-right"></use>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="component-block text-center">
-        <div class="container-general">
-          <h2 class="secondary-title mb-5">Ultimele articole de pe blog</h2>
-          <div class="row gy-5 gy-lg-0">
-            <div class="col-sm-6 col-lg-4">
-              <figure class="article-card">
-                <div class="article-card-date">28.06.2024</div>
-                <a href="#" title="">
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/temporary/abc-stylish-elegant-woman-car-salon-768x512.jpg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <a href="#" title=""
-                    >De ce ar trebui să optezi pentru o mașină second-hand
-                    certificată?</a
-                  >
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <figure class="article-card">
-                <div class="article-card-date">24.06.2024</div>
-                <a href="#" title="">
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/temporary/abc-woman-salesperson-asking-sign-some-documents-car-dealership-768x511.jpg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <a href="#" title=""
-                    >Ce condiții trebuie să îndepliniți pentru a obține un
-                    leasing auto?</a
-                  >
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <figure class="article-card">
-                <div class="article-card-date">30.06.2024</div>
-                <a href="#" title="">
-                  <img
-                    class="img-fluid"
-                    src="../assets/images/temporary/abc-near-doors-girl-modern-car-salon-daytime-indoors-buying-new-vehicle-768x512.jpg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <a href="#" title=""
-                    >Beneficiile și dezavantajele achiziționării unei mașini cu
-                    plata cash</a
-                  >
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <a class="btn btn-arrow btn-outline-light mt-5" href="#" title="">
-            <span>Vezi mai multe</span>
-            <svg>
-              <use href="../assets/images/sprite.svg#icon-arrow-right"></use>
-            </svg>
-          </a>
-        </div>
-      </section>
+      </div>
     </main>
     <footer class="footer">
       <div class="container-general">
@@ -1765,7 +597,14 @@
     <script src="https://dev.plus-auto.ro/assets/js/select2.min.js"></script>
     <script src="../js/prod/main.js"></script>
     <script>
-      // Initierea selectului respectiv
+      $("#js-salestype-select").select2({
+        minimumResultsForSearch: Infinity,
+        placeholder: $("#js-salestype-select").attr("placeholder"),
+        tags: false,
+        allowClear: true,
+        theme: "bootstrap-5",
+      });
+
       $("#js-brand-select").select2({
         closeOnSelect: false,
         placeholder: $("#js-brand-select").attr("placeholder"),
@@ -1774,12 +613,18 @@
         theme: "bootstrap-5",
       });
 
-      // Initierea selectului respectiv
       $("#js-model-select").select2({
         closeOnSelect: false,
         placeholder: $("#js-model-select").attr("placeholder"),
         allowClear: true,
         tags: true,
+        theme: "bootstrap-5",
+      });
+
+      $("#js-fuel-select").select2({
+        placeholder: $("#js-fuel-select").attr("placeholder"),
+        allowClear: true,
+        tags: false,
         theme: "bootstrap-5",
       });
 
