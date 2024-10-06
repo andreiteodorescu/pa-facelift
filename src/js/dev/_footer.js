@@ -3,7 +3,6 @@ const mediaQuery = window.matchMedia("(max-width: 767px)");
 // Function to handle footer toggle
 function handleFooterToggle(e) {
   if (e.matches) {
-    console.log("Mobile view");
     // If the viewport is 767px or lower
     $(".js-footer-toggle").on("click", function () {
       $(this).next().slideToggle();
