@@ -134,7 +134,7 @@
           <div class="component-car-listing">
             <aside class="filters-wrapper">
               <button
-                class="filter-close d-1281-none"
+                class="filter-close d-1281-none js-filter-close"
                 type="button"
                 aria-label="Close filters"
               >
@@ -709,387 +709,542 @@
                     </div>
                   </div>
                 </div>
+                <button
+                  class="btn btn-200 btn-primary d-md-none js-filter-close"
+                  type="button"
+                >
+                  <span>Aplica filtre</span>
+                </button>
               </div>
             </aside>
             <section class="filtered-car-list">
-              <article class="card-car card-car-horizontal">
-                <figure class="card-car-image">
-                  <div class="card-car-badge bg-success">Km putini</div>
-                  <a href="#" title="">
-                    <img
-                      width="360"
-                      height="270"
-                      src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                      alt=""
-                    />
-                  </a>
-                </figure>
-                <div class="card-car-content">
-                  <div class="card-content-h-wrap">
-                    <div class="card-car-content-info">
-                      <h4 class="card-car-content-title">
-                        <a href="#" title=""
-                          >GLE 400d 4M AMG AUX.HEAT MASSAGE 69.091 € NETTO</a
-                        >
-                      </h4>
-                      <div class="card-car-content-type">SUV</div>
-                    </div>
-                    <ul class="list-unstyled card-car-content-features">
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-speedometer"
-                          ></use>
-                        </svg>
-                        <span>107.000 km</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gasoline-pump"
-                          ></use>
-                        </svg>
-                        <span>Diesel</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gearbox"
-                          ></use>
-                        </svg>
-                        <span>Automata</span>
-                      </li>
-
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-engine"
-                          ></use>
-                        </svg>
-                        <span>309 cp</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-piston"
-                          ></use>
-                        </svg>
-                        <span>2487 cm3</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-calendar"
-                          ></use>
-                        </svg>
-                        <span>03.2024</span>
-                      </li>
+              <div class="filtered-car-list-top">
+                <div class="filtered-car-list-top-left">
+                  Showing 1 to 16 of 1559 vehicles
+                </div>
+                <div class="filtered-car-list-top-right">
+                  <div class="filtered-car-list-top-right-dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Cele mai vizualizate
+                    </button>
+                    <ul class="dropdown-menu shadow-sm">
+                      <li>Cele mai noi</li>
+                      <li>Cele mai vechi</li>
+                      <li class="active">Cele mai vizualizate</li>
+                      <li>Pret crescator</li>
+                      <li>Pret descrescator</li>
                     </ul>
-
-                    <div class="card-content-misc">
-                      <div class="card-content-dealer">
-                        <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
-                          <img
-                            class="card-content-dealer-image"
-                            loading="lazy"
-                            src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
-                            alt="Plus Auto"
-                            title="Plus Auto"
-                          />
-                        </a>
-                        <div class="card-content-dealer-bottom">
-                          <div class="card-car-content-seller">
-                            <a href="https://dev.plus-auto.ro/dealer/plus-auto/"
-                              ><strong>Plus Auto</strong></a
-                            >
-                          </div>
-                          <div class="card-content-dealer-location">
-                            Ramnicu Valcea, judet Valcea
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-content-misc-right">
-                        <div>Vizualizari: 8</div>
-                        <div>ID anunt: 93145</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-car-content-action">
-                    <div class="card-car-content-action-price">
-                      <div class="card-car-content-action-price-normal">
-                        95.000 &euro;
-                      </div>
-                      <div class="card-car-content-action-price-vat">
-                        95.000 &euro; NET
-                      </div>
-                    </div>
-                    <div class="card-car-content-action-bottom">
-                      <a class="btn btn-arrow btn-primary" href="#" title="">
-                        <span>Vezi detalii</span>
-                        <svg>
-                          <use
-                            href="../assets/images/sprite.svg#icon-arrow-right"
-                          ></use>
-                        </svg>
-                      </a>
-                      <a class="btn btn-outline-light mt-2" href="#" title="">
-                        <span>Contacteaza</span>
-                      </a>
-                    </div>
                   </div>
                 </div>
-              </article>
-              <article class="card-car card-car-horizontal">
-                <figure class="card-car-image">
-                  <div class="card-car-badge bg-warning">Km putini</div>
-                  <a href="#" title="">
-                    <img
-                      width="360"
-                      height="270"
-                      src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                      alt=""
-                    />
-                  </a>
-                </figure>
-                <div class="card-car-content">
-                  <div class="card-content-h-wrap">
-                    <div class="card-car-content-info">
-                      <h4 class="card-car-content-title">
-                        <a href="#" title="">Artura Performance</a>
-                      </h4>
-                      <div class="card-car-content-type">SUV</div>
-                    </div>
-                    <ul class="list-unstyled card-car-content-features">
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-speedometer"
-                          ></use>
-                        </svg>
-                        <span>107.000 km</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gasoline-pump"
-                          ></use>
-                        </svg>
-                        <span>Hibrid (B/E)</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gearbox"
-                          ></use>
-                        </svg>
-                        <span>Automata</span>
-                      </li>
-
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-engine"
-                          ></use>
-                        </svg>
-                        <span>309 cp</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-piston"
-                          ></use>
-                        </svg>
-                        <span>2487 cm3</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-calendar"
-                          ></use>
-                        </svg>
-                        <span>03.2024</span>
-                      </li>
-                    </ul>
-
-                    <div class="card-content-misc">
-                      <div class="card-content-dealer">
-                        <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
-                          <img
-                            class="card-content-dealer-image"
-                            loading="lazy"
-                            src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
-                            alt="Plus Auto"
-                            title="Plus Auto"
-                          />
-                        </a>
-                        <div class="card-content-dealer-bottom">
-                          <div class="card-car-content-seller">
-                            <a href="https://dev.plus-auto.ro/dealer/plus-auto/"
-                              ><strong>Plus Auto</strong></a
-                            >
-                          </div>
-                          <div class="card-content-dealer-location">
-                            Ramnicu Valcea, judet Valcea
-                          </div>
-                        </div>
+              </div>
+              <div class="filtered-car-list-content">
+                <article class="card-car card-car-horizontal">
+                  <figure class="card-car-image">
+                    <div class="card-car-badge bg-success">Km putini</div>
+                    <a href="#" title="">
+                      <img
+                        width="360"
+                        height="270"
+                        src="../assets/images/temporary/97007-1878508-thumbnail.webp"
+                        alt=""
+                      />
+                    </a>
+                  </figure>
+                  <div class="card-car-content">
+                    <div class="card-content-h-wrap">
+                      <div class="card-car-content-info">
+                        <h4 class="card-car-content-title">
+                          <a href="#" title=""
+                            >GLE 400d 4M AMG AUX.HEAT MASSAGE 69.091 € NETTO</a
+                          >
+                        </h4>
+                        <div class="card-car-content-type">SUV</div>
                       </div>
-                      <div class="card-content-misc-right">
-                        <div>Vizualizari: 8</div>
-                        <div>ID anunt: 93145</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-car-content-action">
-                    <div class="card-car-content-action-price">
-                      <div class="card-car-content-action-price-normal">
-                        320.000 &euro;
-                      </div>
-                      <div class="card-car-content-action-price-vat">
-                        300.000 &euro; NET
-                      </div>
-                    </div>
-                    <div class="card-car-content-action-bottom">
-                      <a class="btn btn-arrow btn-primary" href="#" title="">
-                        <span>Vezi detalii</span>
-                        <svg>
-                          <use
-                            href="../assets/images/sprite.svg#icon-arrow-right"
-                          ></use>
-                        </svg>
-                      </a>
-                      <a class="btn btn-outline-light mt-2" href="#" title="">
-                        <span>Contacteaza</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card-car card-car-horizontal">
-                <figure class="card-car-image">
-                  <a href="#" title="">
-                    <img
-                      width="360"
-                      height="270"
-                      src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                      alt=""
-                    />
-                  </a>
-                </figure>
-                <div class="card-car-content">
-                  <div class="card-content-h-wrap">
-                    <div class="card-car-content-info">
-                      <h4 class="card-car-content-title">
-                        <a href="#" title=""
-                          >GLE 400d 4M AMG AUX.HEAT MASSAGE 69.091 € NETTO</a
-                        >
-                      </h4>
-                      <div class="card-car-content-type">SUV</div>
-                    </div>
-                    <ul class="list-unstyled card-car-content-features">
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-speedometer"
-                          ></use>
-                        </svg>
-                        <span>107.000 km</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gasoline-pump"
-                          ></use>
-                        </svg>
-                        <span>Diesel</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-gearbox"
-                          ></use>
-                        </svg>
-                        <span>Automata</span>
-                      </li>
+                      <ul class="list-unstyled card-car-content-features">
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-speedometer"
+                            ></use>
+                          </svg>
+                          <span>107.000 km</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gasoline-pump"
+                            ></use>
+                          </svg>
+                          <span>Diesel</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gearbox"
+                            ></use>
+                          </svg>
+                          <span>Automata</span>
+                        </li>
 
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-engine"
-                          ></use>
-                        </svg>
-                        <span>309 cp</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-piston"
-                          ></use>
-                        </svg>
-                        <span>2487 cm3</span>
-                      </li>
-                      <li class="card-car-content-features-item">
-                        <svg class="card-car-content-features-item-icon">
-                          <use
-                            href="../assets/images/sprite.svg#icon-calendar"
-                          ></use>
-                        </svg>
-                        <span>03.2024</span>
-                      </li>
-                    </ul>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-engine"
+                            ></use>
+                          </svg>
+                          <span>309 cp</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-piston"
+                            ></use>
+                          </svg>
+                          <span>2487 cm3</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-calendar"
+                            ></use>
+                          </svg>
+                          <span>03.2024</span>
+                        </li>
+                      </ul>
 
-                    <div class="card-content-misc">
-                      <div class="card-content-dealer">
-                        <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
-                          <img
-                            class="card-content-dealer-image"
-                            loading="lazy"
-                            src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
-                            alt="Plus Auto"
-                            title="Plus Auto"
-                          />
-                        </a>
-                        <div class="card-content-dealer-bottom">
-                          <div class="card-car-content-seller">
-                            <a href="https://dev.plus-auto.ro/dealer/plus-auto/"
-                              ><strong>Plus Auto</strong></a
-                            >
-                          </div>
-                          <div class="card-content-dealer-location">
-                            Ramnicu Valcea, judet Valcea
+                      <div class="card-content-misc">
+                        <div class="card-content-dealer">
+                          <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
+                            <img
+                              class="card-content-dealer-image"
+                              loading="lazy"
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
+                              alt="Plus Auto"
+                              title="Plus Auto"
+                            />
+                          </a>
+                          <div class="card-content-dealer-bottom">
+                            <div class="card-car-content-seller">
+                              <a
+                                href="https://dev.plus-auto.ro/dealer/plus-auto/"
+                                ><strong>Plus Auto</strong></a
+                              >
+                            </div>
+                            <div class="card-content-dealer-location">
+                              Ramnicu Valcea, judet Valcea
+                            </div>
                           </div>
                         </div>
+                        <div class="card-content-misc-right">
+                          <div>Vizualizari: 8</div>
+                          <div>ID anunt: 93145</div>
+                        </div>
                       </div>
-                      <div class="card-content-misc-right">
-                        <div>Vizualizari: 8</div>
-                        <div>ID anunt: 93145</div>
+                    </div>
+                    <div class="card-car-content-action">
+                      <div class="card-car-content-action-price">
+                        <div class="card-car-content-action-price-normal">
+                          95.000 &euro;
+                        </div>
+                        <div class="card-car-content-action-price-vat">
+                          95.000 &euro; NET
+                        </div>
+                      </div>
+                      <div class="card-car-content-action-bottom">
+                        <a class="btn btn-arrow btn-primary" href="#" title="">
+                          <span>Vezi detalii</span>
+                          <svg>
+                            <use
+                              href="../assets/images/sprite.svg#icon-arrow-right"
+                            ></use>
+                          </svg>
+                        </a>
+                        <a class="btn btn-outline-light mt-2" href="#" title="">
+                          <span>Contacteaza</span>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="card-car-content-action">
-                    <div class="card-car-content-action-price">
-                      <div class="card-car-content-action-price-normal">
-                        95.000 &euro;
+                </article>
+                <article class="card-car card-car-horizontal">
+                  <figure class="card-car-image">
+                    <div class="card-car-badge bg-warning">Km putini</div>
+                    <a href="#" title="">
+                      <img
+                        width="360"
+                        height="270"
+                        src="../assets/images/temporary/97007-1878508-thumbnail.webp"
+                        alt=""
+                      />
+                    </a>
+                  </figure>
+                  <div class="card-car-content">
+                    <div class="card-content-h-wrap">
+                      <div class="card-car-content-info">
+                        <h4 class="card-car-content-title">
+                          <a href="#" title="">Artura Performance</a>
+                        </h4>
+                        <div class="card-car-content-type">SUV</div>
                       </div>
-                      <div class="card-car-content-action-price-vat">
-                        95.000 &euro; NET
+                      <ul class="list-unstyled card-car-content-features">
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-speedometer"
+                            ></use>
+                          </svg>
+                          <span>107.000 km</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gasoline-pump"
+                            ></use>
+                          </svg>
+                          <span>Hibrid (B/E)</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gearbox"
+                            ></use>
+                          </svg>
+                          <span>Automata</span>
+                        </li>
+
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-engine"
+                            ></use>
+                          </svg>
+                          <span>309 cp</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-piston"
+                            ></use>
+                          </svg>
+                          <span>2487 cm3</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-calendar"
+                            ></use>
+                          </svg>
+                          <span>03.2024</span>
+                        </li>
+                      </ul>
+
+                      <div class="card-content-misc">
+                        <div class="card-content-dealer">
+                          <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
+                            <img
+                              class="card-content-dealer-image"
+                              loading="lazy"
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
+                              alt="Plus Auto"
+                              title="Plus Auto"
+                            />
+                          </a>
+                          <div class="card-content-dealer-bottom">
+                            <div class="card-car-content-seller">
+                              <a
+                                href="https://dev.plus-auto.ro/dealer/plus-auto/"
+                                ><strong>Plus Auto</strong></a
+                              >
+                            </div>
+                            <div class="card-content-dealer-location">
+                              Ramnicu Valcea, judet Valcea
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-content-misc-right">
+                          <div>Vizualizari: 8</div>
+                          <div>ID anunt: 93145</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="card-car-content-action-bottom">
-                      <a class="btn btn-arrow btn-primary" href="#" title="">
-                        <span>Vezi detalii</span>
-                        <svg>
-                          <use
-                            href="../assets/images/sprite.svg#icon-arrow-right"
-                          ></use>
-                        </svg>
-                      </a>
-                      <a class="btn btn-outline-light mt-2" href="#" title="">
-                        <span>Contacteaza</span>
-                      </a>
+                    <div class="card-car-content-action">
+                      <div class="card-car-content-action-price">
+                        <div class="card-car-content-action-price-normal">
+                          320.000 &euro;
+                        </div>
+                        <div class="card-car-content-action-price-vat">
+                          300.000 &euro; NET
+                        </div>
+                      </div>
+                      <div class="card-car-content-action-bottom">
+                        <a class="btn btn-arrow btn-primary" href="#" title="">
+                          <span>Vezi detalii</span>
+                          <svg>
+                            <use
+                              href="../assets/images/sprite.svg#icon-arrow-right"
+                            ></use>
+                          </svg>
+                        </a>
+                        <a class="btn btn-outline-light mt-2" href="#" title="">
+                          <span>Contacteaza</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+                <article class="card-car card-car-horizontal">
+                  <figure class="card-car-image">
+                    <a href="#" title="">
+                      <img
+                        width="360"
+                        height="270"
+                        src="../assets/images/temporary/97007-1878508-thumbnail.webp"
+                        alt=""
+                      />
+                    </a>
+                  </figure>
+                  <div class="card-car-content">
+                    <div class="card-content-h-wrap">
+                      <div class="card-car-content-info">
+                        <h4 class="card-car-content-title">
+                          <a href="#" title=""
+                            >GLE 400d 4M AMG AUX.HEAT MASSAGE 69.091 € NETTO</a
+                          >
+                        </h4>
+                        <div class="card-car-content-type">SUV</div>
+                      </div>
+                      <ul class="list-unstyled card-car-content-features">
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-speedometer"
+                            ></use>
+                          </svg>
+                          <span>107.000 km</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gasoline-pump"
+                            ></use>
+                          </svg>
+                          <span>Diesel</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-gearbox"
+                            ></use>
+                          </svg>
+                          <span>Automata</span>
+                        </li>
+
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-engine"
+                            ></use>
+                          </svg>
+                          <span>309 cp</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-piston"
+                            ></use>
+                          </svg>
+                          <span>2487 cm3</span>
+                        </li>
+                        <li class="card-car-content-features-item">
+                          <svg class="card-car-content-features-item-icon">
+                            <use
+                              href="../assets/images/sprite.svg#icon-calendar"
+                            ></use>
+                          </svg>
+                          <span>03.2024</span>
+                        </li>
+                      </ul>
+
+                      <div class="card-content-misc">
+                        <div class="card-content-dealer">
+                          <a href="https://dev.plus-auto.ro/dealer/plus-auto/">
+                            <img
+                              class="card-content-dealer-image"
+                              loading="lazy"
+                              src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
+                              alt="Plus Auto"
+                              title="Plus Auto"
+                            />
+                          </a>
+                          <div class="card-content-dealer-bottom">
+                            <div class="card-car-content-seller">
+                              <a
+                                href="https://dev.plus-auto.ro/dealer/plus-auto/"
+                                ><strong>Plus Auto</strong></a
+                              >
+                            </div>
+                            <div class="card-content-dealer-location">
+                              Ramnicu Valcea, judet Valcea
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-content-misc-right">
+                          <div>Vizualizari: 8</div>
+                          <div>ID anunt: 93145</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-car-content-action">
+                      <div class="card-car-content-action-price">
+                        <div class="card-car-content-action-price-normal">
+                          95.000 &euro;
+                        </div>
+                        <div class="card-car-content-action-price-vat">
+                          95.000 &euro; NET
+                        </div>
+                      </div>
+                      <div class="card-car-content-action-bottom">
+                        <a class="btn btn-arrow btn-primary" href="#" title="">
+                          <span>Vezi detalii</span>
+                          <svg>
+                            <use
+                              href="../assets/images/sprite.svg#icon-arrow-right"
+                            ></use>
+                          </svg>
+                        </a>
+                        <a class="btn btn-outline-light mt-2" href="#" title="">
+                          <span>Contacteaza</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="filtered-car-list-bottom">
+                <nav class="pagination-wrapper">
+                  <ul class="pagination">
+                    <li
+                      class="page-item disabled"
+                      aria-disabled="true"
+                      aria-label="« Înapoi"
+                    >
+                      <a class="page-link" aria-hidden="true">‹</a>
+                    </li>
+
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=2"
+                        >2</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=3"
+                        >3</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=4"
+                        >4</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=5"
+                        >5</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=6"
+                        >6</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=7"
+                        >7</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=8"
+                        >8</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=9"
+                        >9</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=10"
+                        >10</a
+                      >
+                    </li>
+
+                    <li class="page-item disabled" aria-disabled="true">
+                      <a class="page-link">...</a>
+                    </li>
+
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=1353"
+                        >1353</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=1354"
+                        >1354</a
+                      >
+                    </li>
+
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://dev.plus-auto.ro/autoturisme?page=2"
+                        rel="next"
+                        aria-label="Înainte »"
+                        >›</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="pagination-text">
+                    <p class="small text-muted mb-0">
+                      Arată
+                      <span class="fw-semibold">1</span>
+                      la
+                      <span class="fw-semibold">10</span>
+                      din
+                      <span class="fw-semibold">13536</span>
+                      rezultate
+                    </p>
+                  </div>
+                </nav>
+              </div>
             </section>
           </div>
         </div>

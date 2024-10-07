@@ -131,10 +131,8 @@
         border-radius: $border-radius;
       }
 
-      &:first-child
-        .custom-select
-        .select2-container--bootstrap-5
-        .select2-selection {
+      &:first-child .dropdown-toggle,
+      .custom-select .select2-container--bootstrap-5 .select2-selection {
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
 
@@ -296,7 +294,7 @@
       left: 0px;
       right: 0px;
       background-color: #fff;
-      height: 382px;
+      max-height: 382px;
       opacity: 0;
       visibility: hidden;
       border-radius: 0px 0px 16px 16px;
@@ -304,12 +302,17 @@
       .intelligent-search-info {
         font-size: 13px;
         line-height: 18px;
-        color: rgb(145 149 171);
+        color: #5b6065;
         font-weight: 500;
         display: block;
         background: #eef1fb;
         padding-bottom: 10px;
         padding-top: 5px;
+
+        strong {
+          font-weight: 700;
+          color: $gen-color;
+        }
       }
 
       &.active {
@@ -320,7 +323,7 @@
     }
 
     .box-car-search {
-      height: 333px;
+      max-height: 333px;
       overflow: auto;
       margin-bottom: 0;
 

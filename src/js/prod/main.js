@@ -5,8 +5,8 @@ $(".filter-trigger").on("click", function () {
   $("body").addClass("filter-is-open");
 });
 
-// Close filters when filter-close button is clicked
-$(".filter-close").on("click", function () {
+// Close filters when js-filter-close button is clicked
+$(".js-filter-close").on("click", function () {
   $(".filters-wrapper").removeClass("filters-wrapper-open");
   $("body").removeClass("filter-is-open");
 });

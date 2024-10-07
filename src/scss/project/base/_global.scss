@@ -82,3 +82,60 @@ body {
 .content-interior {
   padding: 30px 0 0;
 }
+
+.page-link.active,
+.active > .page-link {
+  background-color: $gen-color;
+  border-color: $gen-color;
+}
+
+.pagination {
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 45px;
+    justify-content: center;
+
+    .page-item {
+      .page-link {
+        border: none;
+      }
+
+      &:first-child,
+      &:last-child {
+        order: 0;
+        position: absolute;
+        top: 0;
+
+        .page-link {
+          border-radius: 30px;
+          width: 50px;
+          border: var(--bs-pagination-border-width) solid
+            var(--bs-pagination-border-color);
+        }
+      }
+
+      &:first-child {
+        left: 50%;
+        transform: translateX(-60px);
+      }
+
+      &:last-child {
+        right: 50%;
+        transform: translateX(60px);
+      }
+
+      &:not(:first-child) .page-link {
+        background-color: transparent;
+        color: $gen-color;
+      }
+
+      &.active {
+        .page-link {
+          color: $red;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
