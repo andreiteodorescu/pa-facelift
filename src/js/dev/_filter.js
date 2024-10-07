@@ -25,9 +25,9 @@ function removeClickOutsideFilters() {
   $(document).off("click");
 }
 
-// Check if the window width is between 768px and 1199px
+// Check if the window width is between 768px and 1280px
 const mediaQuery = window.matchMedia(
-  "(min-width: 768px) and (max-width: 1199px)"
+  "(min-width: 768px) and (max-width: 1280px)"
 );
 
 // Function to apply or remove the event listener based on screen size

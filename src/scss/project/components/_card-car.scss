@@ -14,7 +14,6 @@
       object-fit: cover;
       object-position: 50% 50%;
       width: 100%;
-      height: 270px;
       transition: transform 0.5s ease-in-out;
     }
 
@@ -40,6 +39,11 @@
     padding: 6px 16px;
     border-radius: 50px;
     z-index: 1;
+
+    @include media-breakpoint-down(xl) {
+      top: 10px;
+      left: 10px;
+    }
   }
 
   &-banner {
@@ -203,9 +207,15 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+
+    @media (min-width: 1101px) {
+      padding-right: 15px;
+    }
   }
 
   .card-content-dealer {
+    flex: 1;
+
     &-image {
       max-width: 150px;
       height: auto;
@@ -215,6 +225,12 @@
     &-bottom {
       margin-top: 5px;
       font-size: 13px;
+      display: flex;
+
+      @include media-breakpoint-down(xxl) {
+        flex-direction: column;
+        margin-top: 2px;
+      }
 
       a {
         text-decoration: none;
@@ -229,25 +245,83 @@
         font-size: 13px;
       }
     }
+
+    &-location {
+      padding-left: 8px;
+      margin-left: 9px;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 11px;
+        width: 1px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -6px;
+        background-color: $gen-color;
+      }
+
+      @include media-breakpoint-down(xxl) {
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 2px;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 
   &-horizontal {
-    flex-direction: row;
     height: auto;
 
+    @media (max-width: 1100px) {
+      width: 32%;
+    }
+
+    @media (max-width: 850px) {
+      width: 49%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+
+    @media (min-width: 1101px) {
+      flex-direction: row;
+      max-height: 270px;
+    }
+
     .card-car-image {
-      border-top-right-radius: 0;
-      border-bottom-left-radius: $border-radius;
+      @media (min-width: 1101px) {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      @media (min-width: 1281px) and (max-width: 1350px) {
+        max-width: 300px;
+      }
+
+      @include media-breakpoint-between(sm, lg) {
+        img {
+          height: 100%;
+        }
+      }
     }
 
     .card-car-content {
-      flex-direction: row;
-      border: 1px solid $grey-extralight-2;
-      border-left: none;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: $border-radius;
       padding-left: 15px;
       padding-right: 15px;
+
+      @media (min-width: 1101px) {
+        flex-direction: row;
+        border: 1px solid $grey-extralight-2;
+        border-left: none;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: $border-radius;
+      }
 
       &-info {
         margin: 0;
@@ -261,9 +335,23 @@
         padding: 15px 0;
         border-top: none;
         margin-top: 0;
-        gap: 20px;
+        column-gap: 20px;
+        row-gap: 15px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
+        @include media-breakpoint-down(xxl) {
+          padding: 5px 0;
+        }
+
+        @media (max-width: 1100px) {
+          padding: 20px 0;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 450px) and (max-width: 575.98px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
 
         &-item {
           display: flex;
@@ -277,20 +365,35 @@
       }
 
       &-action {
-        flex-direction: column;
-        border-top: none;
-        border-left: 1px solid $grey-extralight-2;
-        margin: 0;
-        padding: 0;
-        width: 180px;
-        flex-shrink: 0;
-        align-items: end;
-        padding-left: 15px;
+        @media (min-width: 1101px) {
+          flex-direction: column;
+          border-top: none;
+          border-left: 1px solid $grey-extralight-2;
+          margin: 0;
+          padding: 0;
+          width: 180px;
+          flex-shrink: 0;
+          align-items: end;
+          padding-left: 15px;
+        }
+
+        @media (max-width: 1100px) {
+          flex-direction: column;
+        }
+
+        @media (max-width: 400px) {
+          align-items: normal;
+        }
 
         &-price {
           text-align: right;
           font-size: 26px;
           font-weight: 600;
+
+          @media (max-width: 1100px) {
+            text-align: center;
+            margin-bottom: 15px;
+          }
         }
 
         &-bottom {
@@ -299,6 +402,40 @@
           }
         }
       }
+    }
+
+    .card-content-dealer {
+      padding-right: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+  }
+}
+
+.card-content-misc {
+  display: flex;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+
+  &-right {
+    width: 120px;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: $grey-medium-2;
+    font-weight: 500;
+
+    @media (max-width: 1100px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
     }
   }
 }
