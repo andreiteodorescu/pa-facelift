@@ -35,6 +35,10 @@
 .btn-primary {
   background-color: $red;
 
+  svg {
+    fill: #fff;
+  }
+
   &:active,
   &:hover,
   &:first-child:active,
@@ -46,6 +50,10 @@
 .btn-secondary {
   background-color: $yellow;
   color: $link-color;
+
+  svg {
+    fill: $link-color;
+  }
 
   &:active,
   &:hover,

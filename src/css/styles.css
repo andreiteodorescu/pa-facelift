@@ -12059,6 +12059,9 @@ h1,
 .btn-primary {
   background-color: #c03a2e;
 }
+.btn-primary svg {
+  fill: #fff;
+}
 .btn-primary:active, .btn-primary:hover, .btn-primary:first-child:active, .btn-primary:focus-visible {
   background-color: #e6493a !important;
 }
@@ -12066,6 +12069,9 @@ h1,
 .btn-secondary {
   background-color: #eea236;
   color: #050b20;
+}
+.btn-secondary svg {
+  fill: #050b20;
 }
 .btn-secondary:active, .btn-secondary:hover, .btn-secondary:first-child:active, .btn-secondary:focus-visible {
   background-color: #faae45 !important;
@@ -13327,6 +13333,7 @@ h1,
 .card-car-content-features-item-icon {
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
 }
 .card-car-content-features-item span {
   display: block;
@@ -13344,12 +13351,103 @@ h1,
   font-size: 20px;
   font-weight: 700;
 }
+.card-car-content-action-price-vat {
+  font-size: 15px;
+  font-weight: 600;
+}
 .card-car-content-action-link {
   color: #c03a2e;
   text-decoration: none;
 }
 .card-car-content-action-link:hover, .card-car-content-action-link:active {
   text-decoration: underline;
+}
+.card-car-content-type {
+  font-size: 15px;
+  color: rgba(33, 37, 41, 0.75);
+}
+.card-car .card-content-h-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.card-car .card-content-dealer-image {
+  max-width: 150px;
+  height: auto;
+  display: inline-block;
+}
+.card-car .card-content-dealer-bottom {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.card-car .card-content-dealer-bottom a {
+  text-decoration: none;
+  color: #c03a2e;
+}
+.card-car .card-content-dealer-bottom a:hover {
+  text-decoration: underline;
+}
+.card-car .card-content-dealer-bottom .card-car-content-seller {
+  font-size: 13px;
+}
+.card-car-horizontal {
+  flex-direction: row;
+  height: auto;
+}
+.card-car-horizontal .card-car-image {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+}
+.card-car-horizontal .card-car-content {
+  flex-direction: row;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card-car-horizontal .card-car-content-info {
+  margin: 0;
+}
+.card-car-horizontal .card-car-content-title {
+  font-size: 20px;
+}
+.card-car-horizontal .card-car-content-features {
+  padding: 15px 0;
+  border-top: none;
+  margin-top: 0;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-car-horizontal .card-car-content-features-item {
+  display: flex;
+  gap: 5px;
+  text-align: left;
+}
+.card-car-horizontal .card-car-content-features-item span {
+  margin-top: 0;
+}
+.card-car-horizontal .card-car-content-action {
+  flex-direction: column;
+  border-top: none;
+  border-left: 1px solid #e1e1e1;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  flex-shrink: 0;
+  align-items: end;
+  padding-left: 15px;
+}
+.card-car-horizontal .card-car-content-action-price {
+  text-align: right;
+  font-size: 26px;
+  font-weight: 600;
+}
+.card-car-horizontal .card-car-content-action-bottom .btn {
+  width: 100%;
 }
 
 /**
@@ -14479,10 +14577,6 @@ button.swiper-pagination-bullet {
   padding: 15px 0 0;
 }
 
-.filtered-car-list {
-  flex: 1;
-}
-
 .filter-trigger {
   border: none;
   background: none;
@@ -14567,6 +14661,10 @@ button.swiper-pagination-bullet {
 }
 .filter-is-open .select2-container--bootstrap-5 .select2-dropdown {
   z-index: 2001;
+}
+
+.filtered-car-list {
+  flex: 1;
 }
 
 /* Styling; */

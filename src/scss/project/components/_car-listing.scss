@@ -127,10 +127,6 @@
   }
 }
 
-.filtered-car-list {
-  flex: 1;
-}
-
 .filter-trigger {
   border: none;
   background: none;
@@ -218,4 +214,8 @@
   .select2-container--bootstrap-5 .select2-dropdown {
     z-index: 2001;
   }
+}
+
+.filtered-car-list {
+  flex: 1;
 }
