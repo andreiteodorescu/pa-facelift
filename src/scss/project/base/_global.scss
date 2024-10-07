@@ -31,6 +31,7 @@ body {
 .dropdown-toggle {
   padding-right: 20px;
   position: relative;
+  color: $gen-color;
 
   &::after {
     display: inline-block;

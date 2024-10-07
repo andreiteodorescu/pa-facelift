@@ -22,9 +22,8 @@
         transform: scale(1.05);
       }
 
-      + .card-car-content .card-car-content-title a::after {
-        left: 0;
-        right: 0;
+      + .card-car-content .card-car-content-title a {
+        background-size: 0 1px, 100% 1px;
       }
     }
   }
@@ -89,6 +88,33 @@
         margin-bottom: 15px;
       }
     }
+
+    &-horizontal {
+      max-height: 270px;
+
+      @media (max-width: 1100px) {
+        width: 32%;
+        height: auto;
+        max-height: none;
+      }
+
+      @media (max-width: 850px) {
+        width: 49%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        min-height: 270px;
+      }
+
+      img {
+        height: 270px;
+
+        @media (max-width: 1100px) {
+          height: 100%;
+        }
+      }
+    }
   }
 
   &-content {
@@ -105,29 +131,26 @@
     &-title {
       font-size: 18px;
       font-weight: 500;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
+      line-height: 1.4;
 
       a {
         text-decoration: none;
         position: relative;
-
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          border-bottom: 1px solid $red;
-          left: 51%;
-          right: 51%;
-          transition: all 0.3s;
-          bottom: 0;
-        }
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+          ),
+          linear-gradient(to right, rgba($red, 1), rgba($red, 1));
+        background-size: 100% 1px, 0 1px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
 
         &:hover,
-        &:active {
-          &::after {
-            left: 0;
-            right: 0;
-          }
+        &:focus {
+          background-size: 0 1px, 100% 1px;
         }
       }
     }

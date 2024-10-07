@@ -170,3 +170,9 @@
 .search-console-onpage .select2-dropdown {
   border-color: $grey-extralight !important;
 }
+
+.select2-search__field {
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
