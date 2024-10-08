@@ -9,6 +9,11 @@ $(".js-filter-close").on("click", function () {
   $("body").removeClass("filter-is-open");
 });
 
+$(document).on("mouseleave", ".select2-results__option", function () {
+  // Remove the highlighted class when the mouse leaves the list item
+  $(this).removeClass("select2-results__option--highlighted");
+});
+
 // Close filters when clicking outside the filters-wrapper
 // Function to handle the filter close logic
 function handleClickOutsideFilters() {

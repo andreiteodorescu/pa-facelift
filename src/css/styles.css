@@ -13005,6 +13005,17 @@ h1,
   color: #212529;
 }
 
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option {
+  transition: background-color 0.3s ease-in-out;
+}
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option[aria-selected=true] {
+  background-image: url("../assets/images/check-regular.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 15px 15px;
+  padding-left: 35px;
+}
+
 .select2-dropdown {
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.045), 0px 1px 8px rgba(0, 0, 0, 0.045);
 }
