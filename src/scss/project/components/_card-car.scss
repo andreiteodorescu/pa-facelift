@@ -2,6 +2,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid $grey-extralight-2;
+  border-radius: $border-radius;
 
   &-image {
     border-top-left-radius: $border-radius;
@@ -119,8 +121,6 @@
 
   &-content {
     flex: 1;
-    border: 1px solid $grey-extralight-2;
-    border-top: none;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
     padding: 15px 25px;
@@ -205,6 +205,21 @@
         &-vat {
           font-size: 15px;
           font-weight: 600;
+        }
+
+        &-old {
+          font-size: 13px;
+          color: $red;
+
+          span {
+            text-decoration: line-through;
+          }
+        }
+
+        &-normal {
+          &.red {
+            color: $red;
+          }
         }
       }
 
@@ -340,8 +355,6 @@
 
       @media (min-width: 1101px) {
         flex-direction: row;
-        border: 1px solid $grey-extralight-2;
-        border-left: none;
         border-bottom-left-radius: 0;
         border-top-right-radius: $border-radius;
       }

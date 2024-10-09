@@ -49,8 +49,19 @@
 
   &-checklist {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     &-icons {
+      .form-check {
+        padding-left: 25px;
+
+        .form-check-input {
+          margin-left: -25px;
+        }
+      }
+
       .form-check-label {
         display: flex;
 
@@ -69,7 +80,6 @@
     height: 55px;
     padding: 10px 15px;
     outline: 0;
-    background-color: #f4f5f8;
     border: 1px solid $grey-extralight-2;
     width: 100%;
     border-radius: $border-radius;
@@ -129,7 +139,6 @@
   align-items: center;
   color: $red;
   font-weight: 500;
-  margin-bottom: 15px;
   transition: all 0.3s ease-in-out;
 
   svg {
@@ -141,25 +150,27 @@
     transition: all 0.3s ease-in-out;
   }
 
-  @include media-breakpoint-down(md) {
-    position: fixed;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: $red;
-    right: 20px;
-    bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-    z-index: 2;
+  &-sticky {
+    @include media-breakpoint-down(md) {
+      position: fixed;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: $red;
+      right: 20px;
+      bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      z-index: 3;
 
-    svg {
-      fill: #fff;
-    }
+      svg {
+        fill: #fff;
+      }
 
-    span {
-      display: none;
+      span {
+        display: none;
+      }
     }
   }
 }
@@ -214,19 +225,27 @@
     justify-content: space-between;
     align-items: center;
 
-    @include media-breakpoint-down(sm) {
-      flex-direction: column;
-    }
-
     &-right {
-      @include media-breakpoint-down(sm) {
-        margin-top: 15px;
-      }
-
       &-dropdown {
         .dropdown-toggle {
           background: none;
           border: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+          &-button .dropdown-toggle {
+            font-size: 0;
+            background-image: url("../assets/images/filter-regular.svg");
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: center;
+            width: 30px;
+            height: 30px;
+
+            &::after {
+              display: none;
+            }
+          }
         }
 
         .dropdown-menu {
@@ -286,4 +305,11 @@
   .d-1281-none {
     display: none !important;
   }
+}
+
+.filter-close-sticky {
+  position: sticky;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
 }

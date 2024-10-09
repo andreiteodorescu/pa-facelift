@@ -1,6 +1,6 @@
 "use strict";
 
-$(".filter-trigger").on("click", function () {
+$(".js-filter-trigger").on("click", function () {
   $(".filters-wrapper").addClass("filters-wrapper-open");
   $("body").addClass("filter-is-open");
 });
@@ -9,6 +9,11 @@ $(".filter-trigger").on("click", function () {
 $(".js-filter-close").on("click", function () {
   $(".filters-wrapper").removeClass("filters-wrapper-open");
   $("body").removeClass("filter-is-open");
+  if ($(this).hasClass("filter-close-sticky")) {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "fast");
+  }
 });
 $(document).on("mouseleave", ".select2-results__option", function () {
   // Remove the highlighted class when the mouse leaves the list item

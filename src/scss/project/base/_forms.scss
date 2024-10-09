@@ -1,18 +1,23 @@
 .form-check {
   margin-bottom: 5px;
-}
+  padding-left: 30px;
 
-.form-check-input {
-  margin-top: 2px;
+  .form-check-input {
+    margin-top: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -30px;
 
-  &:checked {
-    background-color: $gen-color;
-    border-color: $gen-color;
+    &:checked {
+      background-color: $gen-color;
+      border-color: $gen-color;
+    }
   }
 }
 
 .form-check-label {
   cursor: pointer;
+  padding-top: 1px;
 }
 
 // .form-control:focus {

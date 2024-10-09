@@ -94,6 +94,29 @@
   }
 }
 
+.btn-outline-green {
+  background-color: #fff;
+  border: 1px solid $neon-green;
+  color: $neon-green;
+
+  svg {
+    fill: $neon-green;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $neon-green !important;
+    border-color: $neon-green !important;
+    color: #fff !important;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
 .btn-link {
   padding: 0;
   min-height: auto;
@@ -175,6 +198,23 @@
   svg {
     width: 14px;
     height: 16px;
+    position: relative;
+    top: -1px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:active,
+  &:hover {
+    svg {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.btn-extern {
+  svg {
+    width: 17px;
+    height: 17px;
     position: relative;
     top: -1px;
     transition: transform 0.3s ease-in-out;
