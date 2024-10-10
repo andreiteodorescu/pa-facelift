@@ -117,6 +117,46 @@
   }
 }
 
+.btn-green {
+  background-color: $neon-green;
+  color: #fff;
+
+  svg {
+    fill: #fff;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $neon-green-hover !important;
+    color: #fff !important;
+  }
+}
+
+.btn-outline-light-blue {
+  background-color: #fff;
+  border: 1px solid $blue-waze;
+  color: $blue-waze;
+
+  svg {
+    fill: $blue-waze;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $blue-waze !important;
+    border-color: $blue-waze !important;
+    color: #fff !important;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
 .btn-link {
   padding: 0;
   min-height: auto;
