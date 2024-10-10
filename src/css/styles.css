@@ -13827,17 +13827,43 @@ h1,
   column-gap: 1%;
   row-gap: 20px;
 }
+@media (max-width: 767.98px) {
+  .car-detail-content-slice-specs {
+    flex-direction: column;
+  }
+}
 .car-detail-content-slice-specs li {
   flex: 0 0 49%;
   display: flex;
   gap: 10px;
   font-weight: 500;
 }
+@media (max-width: 767.98px) {
+  .car-detail-content-slice-specs li {
+    flex: 0 0 100%;
+  }
+}
 .car-detail-content-slice-specs li .specs-item-key {
   flex: 0 0 200px;
   display: flex;
-  align-items: center;
   gap: 10px;
+}
+@media (max-width: 991.98px) {
+  .car-detail-content-slice-specs li .specs-item-key {
+    flex: 0 0 150px;
+  }
+}
+@media (max-width: 767.98px) {
+  .car-detail-content-slice-specs li .specs-item-key {
+    flex: 0 0 auto;
+    width: 200px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 400px) {
+  .car-detail-content-slice-specs li .specs-item-key {
+    width: 150px;
+  }
 }
 .car-detail-content-slice-specs li .specs-item-key svg {
   width: 18px;
@@ -13890,8 +13916,13 @@ h1,
 }
 
 .car-detail-sidebar {
-  width: 400px;
   flex-shrink: 0;
+  width: 350px;
+}
+@media (min-width: 1400px) {
+  .car-detail-sidebar {
+    width: 400px;
+  }
 }
 
 .side-card {
@@ -13988,6 +14019,22 @@ h1,
 .side-card-seller-cta .btn {
   width: 100%;
 }
+.side-card-mobile {
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+}
+@media (min-width: 576px) {
+  .side-card-mobile .side-card-seller-cta {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .side-card-mobile .side-card-seller-cta .btn {
+    width: 300px;
+    margin-top: 0 !important;
+  }
+}
 
 .component-car-detail-summary-specs {
   display: flex;
@@ -14049,6 +14096,11 @@ h1,
   width: 100%;
   height: 450px;
   border-radius: 20px;
+}
+@media (max-width: 575.98px) {
+  .goole-iframe iframe {
+    height: auto;
+  }
 }
 
 /**
@@ -15435,6 +15487,41 @@ button.swiper-pagination-bullet {
   margin-right: 0;
 }
 .breadcrumb li:last-child::before {
+  display: none;
+}
+
+.bottom-overflow-fade {
+  cursor: pointer;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+  background: linear-gradient(0deg, #fff 55%, rgba(255, 255, 255, 0) 100%);
+}
+.bottom-overflow-fade svg {
+  fill: #c03a2e;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.bottom-overflow-fade:hover svg {
+  transform: translateY(5px);
+}
+
+.bottom-overflow-limit {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+}
+.bottom-overflow-limit.cancel-overflow-limit {
+  max-height: none;
+  overflow: visible;
+}
+.bottom-overflow-limit.cancel-overflow-limit .bottom-overflow-fade {
   display: none;
 }
 

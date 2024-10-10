@@ -1,5 +1,10 @@
 "use strict";
 
+$(".js-cancel-overflow").on("click", function () {
+  $(this).parent().addClass("cancel-overflow-limit");
+});
+"use strict";
+
 $(".js-filter-trigger").on("click", function () {
   $(".filters-wrapper").addClass("filters-wrapper-open");
   $("body").addClass("filter-is-open");

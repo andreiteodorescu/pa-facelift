@@ -104,10 +104,26 @@
       <div class="content-interior">
         <div class="container-general">
           <h1 class="secondary-title mb-2">BMW H5</h1>
-          <p class="main-subtitle mb-3">
+          <p class="main-subtitle mb-2 mb-xl-3">
             2.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
           </p>
-          <div class="component-car-detail component-car-detail-top">
+          <div class="side-card side-card-mobile d-xl-none">
+            <div class="side-card-price-old">
+              a fost <span>109.000 &euro;</span>
+            </div>
+            <div class="side-card-price-normal">95.000 &euro;</div>
+            <div class="side-card-price-vat">88.000 &euro; NET</div>
+            <div class="side-card-info mt-2">
+              <div>Dată publicare: 19.09.2022 (<i>749 zile în urmă</i>)</div>
+              <div class="mt-1">Ultima modificare: 03.10.2024 15:44:55</div>
+              <div class="mt-1">Locatie vehicul: Bucuresti, Sector 6</div>
+              <div class="mt-1">ID Anunt: 103455</div>
+              <div class="mt-1">Vizualizari: 106</div>
+            </div>
+          </div>
+          <div
+            class="component-car-detail component-car-detail-top d-none d-xl-flex"
+          >
             <ul class="list-unstyled component-car-detail-summary-specs">
               <li>
                 <svg>
@@ -145,6 +161,85 @@
           </div>
           <div class="component-car-detail">
             <section class="car-detail-content">
+              <div class="car-detail-content-slice no-border mt-4">
+                Car slider
+              </div>
+              <div class="car-detail-content-slice py-5">
+                <div class="side-card side-card-mobile d-xl-none">
+                  <div class="side-card-seller-images">
+                    <!-- Daca e seller individual deci nu are logo adauga clasa asta: "individual" -->
+                    <div class="side-card-seller-images-logo">
+                      <a href="#" title="">
+                        <img
+                          class="img-fluid"
+                          src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="side-card-seller-images-headshot">
+                      <a href="#" title="">
+                        <img
+                          class="img-fluid"
+                          src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/users/andrei.niculescu@2x.png"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="side-card-seller-info">
+                    <p class="side-card-seller-info-company">
+                      PLUS AUTOTRADE S.R.L.
+                    </p>
+                    <address class="side-card-seller-info-address">
+                      Piața Montreal Nr.10, Intrarea E, World Trade Center,
+                      București Sectorul 1, Județ București
+                    </address>
+                    <a href="#" class="side-card-seller-info-location">
+                      <div class="side-card-seller-info-location-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-location"
+                          ></use>
+                        </svg>
+                      </div>
+                      <span>Get Directions</span>
+                    </a>
+                  </div>
+                  <div class="side-card-seller-cta">
+                    <a href="tel:0722525950" class="btn btn-primary"
+                      >Suna la 0722.525.950</a
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-outline-light mt-3"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Trimite E-mail
+                    </button>
+                    <a href="#" class="btn btn-extern btn-outline-green mt-3">
+                      <span>WhatsApp</span>
+                      <svg>
+                        <use
+                          href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-extern btn-outline-light-blue mt-3 d-sm-none"
+                    >
+                      <span>Waze</span>
+                      <svg>
+                        <use
+                          href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div class="car-detail-content-slice py-5">
                 <h4 class="car-detail-content-slice-title">Car Overview</h4>
                 <ul class="list-unstyled car-detail-content-slice-specs">
@@ -280,18 +375,20 @@
               </div>
               <div class="car-detail-content-slice py-5">
                 <h4 class="car-detail-content-slice-title">Descriere</h4>
-                <div class="car-detail-content-desc-user">
-                  Quisque imperdiet dignissim enim dictum finibus. Sed
-                  consectetutr convallis enim eget laoreet. Aenean vitae nisl
-                  mollis, porta risus vel, dapibus lectus. Etiam ac suscipit
-                  eros, eget maximus <br /><br />
-                  Etiam sit amet ex pharetra, venenatis ante vehicula, gravida
-                  sapien. Fusce eleifend vulputate nibh, non cursus augue
-                  placerat pellentesque. Sed venenatis risus nec felis mollis,
-                  in pharetra urna euismod. Morbi aliquam ut turpis sit amet
-                  ultrices. Vestibulum mattis blandit nisl, et tristique elit
-                  scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut
-                  rutrum risus et nunc pretium scelerisque.
+                <div class="bottom-overflow-limit">
+                  <div class="car-detail-content-desc-user">
+                    Quisque imperdiet dignissim enim dictum finibus. Sed
+                    consectetutr convallis enim eget laoreet. Aenean vitae nisl
+                    mollis, porta risus vel, dapibus lectus. Etiam ac suscipit
+                    eros, eget maximus <br /><br />
+                    Etiam sit amet ex pharetra, venenatis ante vehicula, gravida
+                    sapien. Fusce eleifend vulputate nibh, non cursus augue
+                    placerat pellentesque. Sed venenatis risus nec felis mollis,
+                    in pharetra urna euismod. Morbi aliquam ut turpis sit amet
+                    ultrices. Vestibulum mattis blandit nisl, et tristique elit
+                    scelerisque nec. Fusce eleifend laoreet dui eget aliquet. Ut
+                    rutrum risus et nunc pretium scelerisque.
+                  </div>
 
                   <div class="car-detail-content-desc-locked">
                     <p>
@@ -411,6 +508,14 @@
                       contactarea reprezentantului de vânzări.
                     </div>
                   </div>
+
+                  <div class="bottom-overflow-fade js-cancel-overflow">
+                    <svg>
+                      <use
+                        href="../assets/images/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
               <div class="car-detail-content-slice py-5">
@@ -418,7 +523,7 @@
                   Facilitati dealer
                 </h4>
                 <ul class="row checked-list checked-list-simple">
-                  <li class="col-lg-3 col-md-6">
+                  <li class="col-md-4 col-xxl-3">
                     <span class="checked-list-icon">
                       <svg>
                         <use
@@ -428,7 +533,7 @@
                     </span>
                     <span class="checked-list-text">Istoric verificat</span>
                   </li>
-                  <li class="col-lg-3 col-md-6">
+                  <li class="col-md-4 col-xxl-3">
                     <span class="checked-list-icon">
                       <svg>
                         <use
@@ -438,7 +543,7 @@
                     </span>
                     <span class="checked-list-text">Istoric verificat</span>
                   </li>
-                  <li class="col-lg-3 col-md-6">
+                  <li class="col-md-4 col-xxl-3">
                     <span class="checked-list-icon">
                       <svg>
                         <use
@@ -448,7 +553,7 @@
                     </span>
                     <span class="checked-list-text">Istoric verificat</span>
                   </li>
-                  <li class="col-lg-3 col-md-6">
+                  <li class="col-md-4 col-xxl-3">
                     <span class="checked-list-icon">
                       <svg>
                         <use
@@ -458,7 +563,7 @@
                     </span>
                     <span class="checked-list-text">Istoric verificat</span>
                   </li>
-                  <li class="col-lg-3 col-md-6">
+                  <li class="col-md-4 col-xxl-3">
                     <span class="checked-list-icon">
                       <svg>
                         <use
@@ -472,68 +577,238 @@
               </div>
               <div class="car-detail-content-slice py-5">
                 <h4 class="car-detail-content-slice-title">Dotări generale</h4>
-                <ul class="row list-unstyled checked-list">
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                  <li class="col-lg-3 col-md-6">
-                    <span class="checked-list-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-check-regular"
-                        ></use>
-                      </svg>
-                    </span>
-                    <span class="checked-list-text">Air Condtioner</span>
-                  </li>
-                </ul>
+                <div class="bottom-overflow-limit">
+                  <ul class="row list-unstyled checked-list">
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                    <li class="col-md-4 col-xxl-3">
+                      <span class="checked-list-icon">
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-check-regular"
+                          ></use>
+                        </svg>
+                      </span>
+                      <span class="checked-list-text">Air Condtioner</span>
+                    </li>
+                  </ul>
+
+                  <div class="bottom-overflow-fade js-cancel-overflow">
+                    <svg>
+                      <use
+                        href="../assets/images/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div class="car-detail-content-slice py-5">
                 <h4 class="car-detail-content-slice-title">Dotari specifice</h4>
@@ -595,7 +870,7 @@
                 </div>
               </div>
             </section>
-            <aside class="car-detail-sidebar">
+            <aside class="car-detail-sidebar d-none d-xl-block">
               <div class="side-card mb-4 shadow-sm">
                 <div class="side-card-price-old">
                   a fost <span>109.000 &euro;</span>
