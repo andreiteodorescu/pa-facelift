@@ -275,3 +275,16 @@
 .btn-300 {
   width: 300px;
 }
+
+.btn-sticky-mobile {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    bottom: 20px;
+    width: 320px !important;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  }
+}

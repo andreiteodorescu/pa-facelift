@@ -13,6 +13,21 @@
       border-color: $gen-color;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 40px !important;
+    min-height: 30px;
+
+    .form-check-input {
+      width: 30px;
+      height: 30px;
+      margin-left: -40px !important;
+    }
+
+    .form-check-label {
+      padding-top: 6px;
+    }
+  }
 }
 
 .form-check-label {

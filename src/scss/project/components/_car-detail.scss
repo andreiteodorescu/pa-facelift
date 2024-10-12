@@ -150,6 +150,8 @@
 .car-detail-sidebar {
   flex-shrink: 0;
   width: 350px;
+  display: flex;
+  flex-direction: column;
 
   @include media-breakpoint-up(xxl) {
     width: 400px;
@@ -159,6 +161,7 @@
 .side-card {
   border-radius: $border-radius;
   border: 1px solid $grey-extralight-2;
+  background-color: #fff;
   padding: 30px;
 
   &-price {
@@ -251,17 +254,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
 
         svg {
           width: 18px;
           height: 18px;
           fill: $red;
         }
-      }
-
-      &:hover,
-      &:active {
-        text-decoration: underline;
       }
     }
   }
@@ -291,6 +290,13 @@
         }
       }
     }
+  }
+}
+
+a.side-card-seller-info-location {
+  &:hover,
+  &:active {
+    text-decoration: underline;
   }
 }
 
@@ -370,5 +376,17 @@
     @include media-breakpoint-down(sm) {
       height: auto;
     }
+  }
+}
+
+.follow-widget {
+  will-change: min-height;
+
+  &-track {
+    flex: 1;
+  }
+
+  &.is-affixed {
+    z-index: 3;
   }
 }

@@ -207,7 +207,9 @@
                     </a>
                   </div>
                   <div class="side-card-seller-cta">
-                    <a href="tel:0722525950" class="btn btn-primary"
+                    <a
+                      href="tel:0722525950"
+                      class="btn btn-primary btn-sticky-mobile"
                       >Suna la 0722.525.950</a
                     >
                     <button
@@ -870,7 +872,7 @@
                 </div>
               </div>
             </section>
-            <aside class="car-detail-sidebar d-none d-xl-block">
+            <aside class="car-detail-sidebar d-none d-xl-flex">
               <div class="side-card mb-4 shadow-sm">
                 <div class="side-card-price-old">
                   a fost <span>109.000 &euro;</span>
@@ -885,205 +887,211 @@
                   <div class="mt-1">Locatie vehicul: Bucuresti, Sector 6</div>
                 </div>
               </div>
-              <div class="side-card shadow-sm">
-                <div class="side-card-seller-images">
-                  <!-- Daca e seller individual deci nu are logo adauga clasa asta: "individual" -->
-                  <div class="side-card-seller-images-logo">
-                    <a href="#" title="">
-                      <img
-                        class="img-fluid"
-                        src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="side-card-seller-images-headshot">
-                    <a href="#" title="">
-                      <img
-                        class="img-fluid"
-                        src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/users/andrei.niculescu@2x.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div class="side-card-seller-info">
-                  <p class="side-card-seller-info-company">
-                    PLUS AUTOTRADE S.R.L.
-                  </p>
-                  <address class="side-card-seller-info-address">
-                    Piața Montreal Nr.10, Intrarea E, World Trade Center,
-                    București Sectorul 1, Județ București
-                  </address>
-                  <a href="#" class="side-card-seller-info-location">
-                    <div class="side-card-seller-info-location-icon">
-                      <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-location"
-                        ></use>
-                      </svg>
+              <div class="follow-widget-track">
+                <div class="follow-widget">
+                  <div class="side-card shadow-sm">
+                    <div class="side-card-seller-images">
+                      <!-- Daca e seller individual deci nu are logo adauga clasa asta: "individual" -->
+                      <div class="side-card-seller-images-logo">
+                        <a href="#" title="">
+                          <img
+                            class="img-fluid"
+                            src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/dealers/1/1-logo.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="side-card-seller-images-headshot">
+                        <a href="#" title="">
+                          <img
+                            class="img-fluid"
+                            src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/users/andrei.niculescu@2x.png"
+                            alt=""
+                          />
+                        </a>
+                      </div>
                     </div>
-                    <span>Get Directions</span>
-                  </a>
-                </div>
-                <div class="side-card-seller-cta">
-                  <a href="tel:0722525950" class="btn btn-primary"
-                    >Suna la 0722.525.950</a
-                  >
-                  <button
-                    type="button"
-                    class="btn btn-outline-light mt-3"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Trimite E-mail
-                  </button>
-                  <a href="#" class="btn btn-extern btn-outline-green mt-3">
-                    <span>WhatsApp</span>
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-diagonal-arrow"
-                      ></use>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    class="btn btn-extern btn-outline-light-blue mt-3 d-sm-none"
-                  >
-                    <span>Waze</span>
-                    <svg>
-                      <use
-                        href="../assets/images/sprite.svg#icon-diagonal-arrow"
-                      ></use>
-                    </svg>
-                  </a>
-
-                  <!-- Modal start -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-custom">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h3 class="modal-title" id="exampleModalLabel">
-                            Solicitare informații
-                          </h3>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            <span class="visually-hidden">Închide</span>
-                          </button>
+                    <div class="side-card-seller-info">
+                      <p class="side-card-seller-info-company">
+                        PLUS AUTOTRADE S.R.L.
+                      </p>
+                      <address class="side-card-seller-info-address">
+                        Piața Montreal Nr.10, Intrarea E, World Trade Center,
+                        București Sectorul 1, Județ București
+                      </address>
+                      <a href="#" class="side-card-seller-info-location">
+                        <div class="side-card-seller-info-location-icon">
+                          <svg>
+                            <use
+                              href="../assets/images/sprite.svg#icon-location"
+                            ></use>
+                          </svg>
                         </div>
-                        <div class="modal-body">
-                          <div class="car-modal-header">
-                            <a
-                              title="Renault Trafic L2H1 dCi 110 CP 9 locuri"
-                              href="https://plus-auto.ro/anunt/renault-trafic-l2h1-dci-110-cp-9-locuri-42/"
-                              class="car-modal-header-image"
-                            >
-                              <img
-                                src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/715/715-1893200-thumbnail.webp"
-                                loading="lazy"
-                                alt="Renault Trafic"
-                                class="img-fluid"
-                              />
-                            </a>
-                            <div class="car-modal-header-content">
-                              <h3 class="car-modal-header-title">
-                                Renault Trafic L2H1 dCi 110 CP 9 locuri
+                        <span>Get Directions</span>
+                      </a>
+                    </div>
+                    <div class="side-card-seller-cta">
+                      <a href="tel:0722525950" class="btn btn-primary"
+                        >Suna la 0722.525.950</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-outline-light mt-3"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        Trimite E-mail
+                      </button>
+                      <a href="#" class="btn btn-extern btn-outline-green mt-3">
+                        <span>WhatsApp</span>
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                          ></use>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-extern btn-outline-light-blue mt-3 d-sm-none"
+                      >
+                        <span>Waze</span>
+                        <svg>
+                          <use
+                            href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                          ></use>
+                        </svg>
+                      </a>
+
+                      <!-- Modal start -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-custom">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h3 class="modal-title" id="exampleModalLabel">
+                                Solicitare informații
                               </h3>
-
-                              <div class="car-modal-header-price">
-                                <div class="car-modal-header-price-discount">
-                                  a fost <span>50.000</span>
-                                </div>
-                                <div class="car-modal-header-price-normal">
-                                  39.500 €
-                                </div>
-
-                                <div class="car-modal-header-price-vat">
-                                  33.193 € NET
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row mt-3">
-                            <div class="col-sm-6">
-                              <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Nume si prenume *"
-                              />
-                            </div>
-                            <div class="col-sm-6 mt-3 mt-sm-0">
-                              <input
-                                type="email"
-                                class="form-control"
-                                placeholder="Adresa de email"
-                              />
-                            </div>
-                          </div>
-                          <div class="row mt-3">
-                            <div class="col-12">
-                              <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Numar de telefon *"
-                              />
-                            </div>
-                          </div>
-                          <div class="row mt-3">
-                            <div class="col-12">
-                              <textarea
-                                class="form-control"
-                                rows="3"
-                                placeholder="Mesaj * Exemplu: Bună ziua, Mă interesează această mașină. Îmi puteți oferi mai multe informații despre ea?"
-                              ></textarea>
-                            </div>
-                          </div>
-                          <div class="row mt-3">
-                            <div class="col-12">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="flexCheckDefault"
-                                />
-                                <label
-                                  class="form-check-label modal-terms-label"
-                                  for="flexCheckDefault"
-                                >
-                                  Sunt de acord cu stocarea și procesarea
-                                  datelor cu caracter personal de către OLD AUTO
-                                  ROLLING S.R.L. conform
-                                  <a href="/gdpr" target="_blank"
-                                    >Politica de prelucrare și procesare a
-                                    datelor cu caracter personal</a
-                                  >.
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row mt-4">
-                            <div class="col-12">
-                              <button class="btn btn-primary w-100">
-                                Trimite solicitarea
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span class="visually-hidden">Închide</span>
                               </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="car-modal-header">
+                                <a
+                                  title="Renault Trafic L2H1 dCi 110 CP 9 locuri"
+                                  href="https://plus-auto.ro/anunt/renault-trafic-l2h1-dci-110-cp-9-locuri-42/"
+                                  class="car-modal-header-image"
+                                >
+                                  <img
+                                    src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/715/715-1893200-thumbnail.webp"
+                                    loading="lazy"
+                                    alt="Renault Trafic"
+                                    class="img-fluid"
+                                  />
+                                </a>
+                                <div class="car-modal-header-content">
+                                  <h3 class="car-modal-header-title">
+                                    Renault Trafic L2H1 dCi 110 CP 9 locuri
+                                  </h3>
+
+                                  <div class="car-modal-header-price">
+                                    <div
+                                      class="car-modal-header-price-discount"
+                                    >
+                                      a fost <span>50.000</span>
+                                    </div>
+                                    <div class="car-modal-header-price-normal">
+                                      39.500 €
+                                    </div>
+
+                                    <div class="car-modal-header-price-vat">
+                                      33.193 € NET
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-sm-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nume si prenume *"
+                                  />
+                                </div>
+                                <div class="col-sm-6 mt-3 mt-sm-0">
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Adresa de email"
+                                  />
+                                </div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Numar de telefon *"
+                                  />
+                                </div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-12">
+                                  <textarea
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="Mesaj * Exemplu: Bună ziua, Mă interesează această mașină. Îmi puteți oferi mai multe informații despre ea?"
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="flexCheckDefault"
+                                    />
+                                    <label
+                                      class="form-check-label modal-terms-label"
+                                      for="flexCheckDefault"
+                                    >
+                                      Sunt de acord cu stocarea și procesarea
+                                      datelor cu caracter personal de către OLD
+                                      AUTO ROLLING S.R.L. conform
+                                      <a href="/gdpr" target="_blank"
+                                        >Politica de prelucrare și procesare a
+                                        datelor cu caracter personal</a
+                                      >.
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <button class="btn btn-primary w-100">
+                                    Trimite solicitarea
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <!-- Modal end -->
                     </div>
                   </div>
-                  <!-- Modal end -->
                 </div>
               </div>
             </aside>
@@ -1412,5 +1420,14 @@
     ></script>
     <script src="../js/standalone/swiper.min.js"></script>
     <script src="../js/prod/main.js"></script>
+    <script src="../js/standalone/sticky.js"></script>
+
+    <script type="text/javascript">
+      const stickyWidget = new StickySidebar(".follow-widget", {
+        topSpacing: 20,
+        containerSelector: ".follow-widget-track",
+        minWidth: 1199,
+      });
+    </script>
   </body>
 </html>
