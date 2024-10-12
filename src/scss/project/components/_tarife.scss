@@ -1,0 +1,165 @@
+.subscription-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-header {
+    background-color: $grey-extralight;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    &-badge {
+      background-color: $gen-color;
+      display: inline-block;
+      border-radius: 3px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    &-icon {
+      width: 34px;
+      height: 33px;
+      margin-bottom: 15px;
+    }
+
+    &-price {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      line-height: 1;
+
+      &-discount {
+        display: inline-block;
+        border-radius: 30px;
+        padding: 11px 20px 8px;
+        font-weight: 500;
+        background-color: #fff;
+        color: $gen-color;
+        margin-bottom: 5px;
+      }
+    }
+
+    &-credits {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    &-availability {
+      color: $green;
+      margin-bottom: 5px;
+    }
+  }
+
+  &-standard {
+    .subscription-card-header {
+      background-color: $red-light;
+    }
+  }
+
+  &-best {
+    .subscription-card-header {
+      background-color: $red;
+      color: #fff;
+
+      &-credits,
+      &-availability {
+        color: #fff;
+      }
+
+      &-icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  &-bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-body {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &-bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-comparison-list {
+    margin: 0;
+
+    li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      &.no {
+        .comparison-list-icon {
+          background-color: $grey-extralight-2;
+
+          svg {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+
+      &.special {
+        .comparison-list-icon {
+          background-color: $yellow;
+        }
+      }
+
+      &.credits {
+        .comparison-list-icon {
+          background-color: #6571ff;
+        }
+      }
+    }
+  }
+}
+
+.comparison-list-icon {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: $green;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    fill: #fff;
+  }
+}
+
+.comparison-list-text {
+  margin-top: 1px;
+}

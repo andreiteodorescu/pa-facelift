@@ -94,7 +94,7 @@
   }
 }
 
-.btn-outline-green {
+.btn-outline-neon-green {
   background-color: #fff;
   border: 1px solid $neon-green;
   color: $neon-green;
@@ -117,8 +117,48 @@
   }
 }
 
-.btn-green {
+.btn-outline-green {
+  background-color: #fff;
+  border: 1px solid $green;
+  color: $green;
+
+  svg {
+    fill: $green;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $green !important;
+    border-color: $green !important;
+    color: #fff !important;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.btn-neon-green {
   background-color: $neon-green;
+  color: #fff;
+
+  svg {
+    fill: #fff;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $neon-green-hover !important;
+    color: #fff !important;
+  }
+}
+
+.btn-green {
+  background-color: $green;
   color: #fff;
 
   svg {
