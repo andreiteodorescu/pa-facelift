@@ -12,6 +12,11 @@
     justify-content: center;
     min-height: 320px;
 
+    @include media-breakpoint-down(xl) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     &-title {
       font-size: 18px;
       font-weight: 600;
@@ -51,6 +56,10 @@
         color: $gen-color;
         margin-bottom: 5px;
       }
+
+      &-tva {
+        font-size: 16px;
+      }
     }
 
     &-credits {
@@ -86,12 +95,27 @@
     }
   }
 
+  &-individual {
+    .subscription-card-header {
+      min-height: auto;
+
+      &-credits {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &-bottom {
     margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &-note {
+      font-size: 12px;
+      margin-top: 20px;
+    }
   }
 
   &-body {
@@ -162,4 +186,10 @@
 
 .comparison-list-text {
   margin-top: 1px;
+}
+
+a.subscription-card-bottom-note {
+  &:hover {
+    text-decoration: none;
+  }
 }

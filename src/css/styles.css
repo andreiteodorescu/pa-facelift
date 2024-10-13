@@ -12225,6 +12225,10 @@ h1,
   fill: #fff;
 }
 
+.btn-dark svg {
+  fill: #fff;
+}
+
 .btn-link {
   padding: 0;
   min-height: auto;
@@ -12604,7 +12608,7 @@ h1,
     position: relative;
   }
   .nav-links-main {
-    padding-top: 130px;
+    padding-top: 90px;
     padding-bottom: 20px;
     list-style: none;
     width: 100%;
@@ -15676,6 +15680,12 @@ button.swiper-pagination-bullet {
   justify-content: center;
   min-height: 320px;
 }
+@media (max-width: 1199.98px) {
+  .subscription-card-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .subscription-card-header-title {
   font-size: 18px;
   font-weight: 600;
@@ -15712,6 +15722,9 @@ button.swiper-pagination-bullet {
   color: #212529;
   margin-bottom: 5px;
 }
+.subscription-card-header-price-tva {
+  font-size: 16px;
+}
 .subscription-card-header-credits {
   color: #777;
   margin-bottom: 20px;
@@ -15733,12 +15746,22 @@ button.swiper-pagination-bullet {
 .subscription-card-best .subscription-card-header-icon {
   fill: #fff;
 }
+.subscription-card-individual .subscription-card-header {
+  min-height: auto;
+}
+.subscription-card-individual .subscription-card-header-credits {
+  margin-bottom: 0;
+}
 .subscription-card-bottom {
   margin-top: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.subscription-card-bottom-note {
+  font-size: 12px;
+  margin-top: 20px;
 }
 .subscription-card-body {
   padding: 20px 10px;
@@ -15793,6 +15816,10 @@ button.swiper-pagination-bullet {
 
 .comparison-list-text {
   margin-top: 1px;
+}
+
+a.subscription-card-bottom-note:hover {
+  text-decoration: none;
 }
 
 .social-media-links {
