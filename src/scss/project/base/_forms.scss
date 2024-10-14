@@ -48,11 +48,24 @@
   min-height: 50px;
 }
 
+.form-floating > .form-control.form-control-area {
+  height: 150px;
+}
+
 .form-select-custom {
   font-size: 14px;
   color: #555;
   padding-top: 14px;
   padding-bottom: 13px;
+}
+
+/* Prevent green highlight and checkmark for valid but non-required fields, selects, checkboxes, and radios */
+.was-validated .form-control:valid:not([required]),
+.was-validated .form-select:valid:not([required]),
+.was-validated .form-check-input:valid:not([required]) {
+  border-color: inherit; /* Reset the border color to default */
+  background-image: none; /* Remove the green checkmark icon */
+  box-shadow: none; /* Remove the green box-shadow (for checkboxes and radios) */
 }
 
 // .form-control:focus {

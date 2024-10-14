@@ -105,10 +105,10 @@
         <div class="container-general">
           <h2 class="secondary-title mb-4">Contacteaza-ne</h2>
           <div class="row">
-            <div class="col-6">
+            <div class="col-lg-8 col-xl-6">
               <form class="needs-validation" novalidate>
                 <div class="row g-3">
-                  <div class="col-6">
+                  <div class="col-md-6">
                     <div class="form-floating">
                       <input
                         type="text"
@@ -125,7 +125,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-md-6">
                     <div class="form-floating">
                       <input
                         type="text"
@@ -140,7 +140,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-md-6">
                     <div class="form-floating">
                       <input
                         type="email"
@@ -151,7 +151,7 @@
                       <label for="email">Adresa de email</label>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-md-6">
                     <select
                       class="form-select form-select-custom"
                       aria-label="Selecteaza motivul pentru care ne contactezi"
@@ -169,6 +169,20 @@
                         Întrebări despre finanțare și leasing
                       </option>
                     </select>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control form-control-area"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        required
+                      ></textarea>
+                      <label for="floatingTextarea2">Mesaj *</label>
+                      <div class="invalid-feedback">
+                        Va rugam introduceti un mesaj
+                      </div>
+                    </div>
                   </div>
                   <div class="col-12">
                     <div class="form-check">
@@ -197,6 +211,24 @@
                   </div>
                 </div>
               </form>
+            </div>
+            <div class="col-lg-4 col-xl-6 mt-5 mt-lg-0">
+              <h4 class="h4 mb-3">OLD AUTO ROLLING S.R.L.</h4>
+              <div class="mb-2">
+                Piața Montreal Nr.10, Intrarea E, World Trade Center București,
+                România
+              </div>
+              <div class="mb-2">
+                Vânzări: <a href="tel:+40 771 141 720"> +40 771 141 720</a>
+              </div>
+              <div class="mb-2">
+                Sugestii și reclamații:
+                <a href="tel:+40 771 141 720"> +40 771 141 720</a>
+              </div>
+              <div>office@oldauto.ro</div>
+
+              <h4 class="h4 mb-3 mt-5">PROGRAM DE LUCRU</h4>
+              <div>Luni-Vineri, 9:00 - 18:00</div>
             </div>
           </div>
         </div>
@@ -523,14 +555,5 @@
     ></script>
     <script src="../js/standalone/swiper.min.js"></script>
     <script src="../js/prod/main.js"></script>
-    <script src="../js/standalone/sticky.js"></script>
-
-    <script type="text/javascript">
-      const stickyWidget = new StickySidebar(".follow-widget", {
-        topSpacing: 20,
-        containerSelector: ".follow-widget-track",
-        minWidth: 1199,
-      });
-    </script>
   </body>
 </html>
