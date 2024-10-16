@@ -21,7 +21,8 @@
           }
         }
 
-        &.language-selector .dropdown-toggle {
+        &.language-selector .dropdown-toggle,
+        &.logged-in .dropdown-toggle {
           color: #fff;
 
           &::after {
@@ -62,11 +63,24 @@
   background-image: url("../assets/images/plus-auto-marketplace.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  flex-shrink: 0;
 }
 
 .nav-links-wrapper {
   display: flex;
   align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.nav-links-main-wrapper {
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .nav-links {
@@ -155,14 +169,83 @@
   }
 }
 
+.logged-in {
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+    padding-right: 15px;
+    gap: 10px;
+
+    &::after {
+      display: inline-block;
+      background-image: url("../assets/images/angle-down-regular.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: cover;
+      content: "";
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -6px;
+      width: 11px;
+      height: 10px;
+
+      @include media-breakpoint-down(lg) {
+        background-image: url("../assets/images/angle-down-regular-white.svg");
+      }
+    }
+
+    &:hover {
+      color: $link-hover;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: -1px;
+
+      @include media-breakpoint-down(lg) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &-text {
+    line-height: 1;
+  }
+}
+
 .hamburger,
 .mobile-extra {
   display: none;
 }
 
+.header-sticky {
+  position: fixed !important;
+  width: 100%;
+  z-index: 11;
+  overflow: initial;
+  top: 0;
+
+  &-body {
+    padding-top: 67px;
+  }
+}
+
 @include media-breakpoint-down(lg) {
   body {
     overflow-x: hidden;
+  }
+
+  .header-sticky-body {
+    padding-top: 107px;
   }
 
   // .main {
@@ -277,7 +360,7 @@
   }
 
   .nav-links-main {
-    padding-top: 90px;
+    padding-top: 110px;
     padding-bottom: 20px;
     list-style: none;
     width: 100%;
@@ -300,8 +383,13 @@
     background-color: $body-color;
     padding-right: 15px;
 
+    .nav-links-item {
+      margin-left: 30px;
+    }
+
     .nav-links-item a,
-    .language-selector .dropdown-toggle {
+    .language-selector .dropdown-toggle,
+    .logged-in .dropdown-toggle {
       color: #fff;
     }
 

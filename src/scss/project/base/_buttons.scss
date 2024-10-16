@@ -197,6 +197,23 @@
   }
 }
 
+.btn-light-blue {
+  background-color: $blue-waze;
+  color: #fff;
+
+  svg {
+    fill: #fff;
+  }
+
+  &:active,
+  &:hover,
+  &:first-child:active,
+  &:focus-visible {
+    background-color: $blue-waze-hover !important;
+    color: #fff !important;
+  }
+}
+
 .btn-dark svg {
   fill: #fff;
 }

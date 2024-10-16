@@ -107,19 +107,20 @@
           <p class="main-subtitle mb-2 mb-xl-3">
             2.0 D5 PowerPulse Momentum 5dr AWD Geartronic Estate
           </p>
-          <div class="side-card side-card-mobile d-xl-none">
+          <div
+            class="side-card side-card-mobile side-card-mobile-bordered text-center text-md-start d-xl-none"
+          >
             <div class="side-card-price-old">
               a fost <span>109.000 &euro;</span>
             </div>
             <div class="side-card-price-normal">95.000 &euro;</div>
             <div class="side-card-price-vat">88.000 &euro; NET</div>
-            <div class="side-card-info mt-2">
-              <div>Dată publicare: 19.09.2022 (<i>749 zile în urmă</i>)</div>
-              <div class="mt-1">Ultima modificare: 03.10.2024 15:44:55</div>
-              <div class="mt-1">Locatie vehicul: Bucuresti, Sector 6</div>
-              <div class="mt-1">ID Anunt: 103455</div>
-              <div class="mt-1">Vizualizari: 106</div>
-            </div>
+          </div>
+          <div
+            class="component-car-detail-top-right mt-2 justify-content-between justify-content-sm-start d-xl-none"
+          >
+            <p>ID Anunt: 103455</p>
+            <p>Vizualizari: 106</p>
           </div>
           <div
             class="component-car-detail component-car-detail-top d-none d-xl-flex"
@@ -161,7 +162,7 @@
           </div>
           <div class="component-car-detail">
             <section class="car-detail-content">
-              <div class="car-detail-content-slice no-border mt-4">
+              <div class="car-detail-content-slice no-border mt-4 mt-xl-0">
                 Car slider
               </div>
               <div class="car-detail-content-slice py-5">
@@ -209,7 +210,12 @@
                   <div class="side-card-seller-cta">
                     <a
                       href="tel:0722525950"
-                      class="btn btn-primary btn-sticky-mobile"
+                      class="btn btn-primary btn-sticky-mobile d-none"
+                      >Suna la 0722.525.950</a
+                    >
+                    <a
+                      href="tel:0722525950"
+                      class="btn btn-primary btn-sticky-mobile-threshold"
                       >Suna la 0722.525.950</a
                     >
                     <button
@@ -220,26 +226,21 @@
                     >
                       Trimite E-mail
                     </button>
-                    <a
-                      href="#"
-                      class="btn btn-extern btn-outline-neon-green mt-3"
-                    >
+                    <a href="#" class="btn btn-extern btn-neon-green mt-3">
                       <span>WhatsApp</span>
                       <svg>
                         <use
-                          href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                          href="../assets/images/sprite.svg#icon-whatsapp"
                         ></use>
                       </svg>
                     </a>
                     <a
                       href="#"
-                      class="btn btn-extern btn-outline-light-blue mt-3 d-sm-none"
+                      class="btn btn-extern btn-light-blue mt-3 d-sm-none"
                     >
                       <span>Waze</span>
                       <svg>
-                        <use
-                          href="../assets/images/sprite.svg#icon-diagonal-arrow"
-                        ></use>
+                        <use href="../assets/images/sprite.svg#icon-waze"></use>
                       </svg>
                     </a>
                   </div>
@@ -378,7 +379,14 @@
                   </li>
                 </ul>
               </div>
-              <div class="car-detail-content-slice py-5">
+              <div class="car-detail-content-slice pt-3 pb-5">
+                <div class="side-card-info mb-4">
+                  <div>
+                    Dată publicare: 19.09.2022 (<i>749 zile în urmă</i>)
+                  </div>
+                  <div class="mt-1">Ultima modificare: 03.10.2024 15:44:55</div>
+                  <div class="mt-1">Locatie vehicul: Bucuresti, Sector 6</div>
+                </div>
                 <h4 class="car-detail-content-slice-title">Descriere</h4>
                 <div class="bottom-overflow-limit">
                   <div class="car-detail-content-desc-user">
@@ -945,25 +953,22 @@
                       >
                         Trimite E-mail
                       </button>
-                      <a
-                        href="#"
-                        class="btn btn-extern btn-outline-neon-green mt-3"
-                      >
+                      <a href="#" class="btn btn-extern btn-neon-green mt-3">
                         <span>WhatsApp</span>
                         <svg>
                           <use
-                            href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                            href="../assets/images/sprite.svg#icon-whatsapp"
                           ></use>
                         </svg>
                       </a>
                       <a
                         href="#"
-                        class="btn btn-extern btn-outline-light-blue mt-3 d-sm-none"
+                        class="btn btn-extern btn-light-blue mt-3 d-sm-none"
                       >
                         <span>Waze</span>
                         <svg>
                           <use
-                            href="../assets/images/sprite.svg#icon-diagonal-arrow"
+                            href="../assets/images/sprite.svg#icon-waze"
                           ></use>
                         </svg>
                       </a>
@@ -1430,7 +1435,7 @@
 
     <script type="text/javascript">
       const stickyWidget = new StickySidebar(".follow-widget", {
-        topSpacing: 20,
+        topSpacing: 75,
         containerSelector: ".follow-widget-track",
         minWidth: 1199,
       });

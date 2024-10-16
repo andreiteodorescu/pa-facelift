@@ -140,3 +140,31 @@ body {
     }
   }
 }
+
+/* Remove arrows in WebKit browsers (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Fix IOS Zoom in on focus */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+.rounded-generic-card {
+  border-radius: $border-radius;
+  padding: 15px;
+  border: 1px solid $grey-extralight-2;
+}

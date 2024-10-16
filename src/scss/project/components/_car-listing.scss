@@ -273,6 +273,19 @@
             }
           }
         }
+
+        &-select {
+          border-radius: $border-radius;
+          border: 1px solid $grey-extralight-2;
+          padding: 0 10px;
+
+          select {
+            padding: 7px 0;
+            border: none;
+            color: $gen-color;
+            background: none;
+          }
+        }
       }
     }
   }

@@ -26,7 +26,7 @@
       >Mergi direct la contentul principal</a
     >
     <header class="header header-red">
-      <div class="container-xxxl">
+      <div class="container-general">
         <nav class="main-nav">
           <a class="logo" href="#" aria-label="Plus Auto Marketplace Logo"></a>
           <div class="nav-links-wrapper">
@@ -774,24 +774,20 @@
                   <span>Arata filtre</span>
                 </button>
                 <div class="filtered-car-list-top-right">
-                  <div
-                    class="filtered-car-list-top-right-dropdown filtered-car-list-top-right-dropdown-button"
-                  >
-                    <button
-                      class="dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Cele mai vizualizate
-                    </button>
-                    <ul class="dropdown-menu shadow-sm">
-                      <li>Cele mai noi</li>
-                      <li>Cele mai vechi</li>
-                      <li class="active">Cele mai vizualizate</li>
-                      <li>Pret crescator</li>
-                      <li>Pret descrescator</li>
-                    </ul>
+                  <div class="filtered-car-list-top-right-dropdown">
+                    <div class="filtered-car-list-top-right-dropdown-select">
+                      <select
+                        name="order_id"
+                        class="form-select-sm text-muted"
+                        onchange="setSortByInput(this, event)"
+                      >
+                        <option value="1">Cele mai noi</option>
+                        <option value="2">Cele mai vechi</option>
+                        <option value="3">Cele mai vizualizate</option>
+                        <option value="4">Preț crescător</option>
+                        <option value="5">Preț descrescător</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -951,8 +947,8 @@
                       <img
                         width="360"
                         height="270"
-                        src="../assets/images/temporary/97007-1878508-thumbnail.webp"
-                        alt=""
+                        src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/9585/9585-168395-thumbnail.webp"
+                        alt="BMW M5 Competition Carbon"
                       />
                     </a>
                   </figure>

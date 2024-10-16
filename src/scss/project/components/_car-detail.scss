@@ -278,6 +278,14 @@
     border-radius: 0;
     border: 0;
 
+    &-bordered {
+      @include media-breakpoint-down(md) {
+        border: 1px solid $grey-extralight-2;
+        border-radius: $border-radius;
+        padding: 10px 20px;
+      }
+    }
+
     @include media-breakpoint-up(sm) {
       .side-card-seller-cta {
         display: flex;

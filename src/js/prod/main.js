@@ -207,6 +207,20 @@ $(".hamburger").on("click", function () {
   $(".header").toggleClass("nav-open");
   $("body").toggleClass("nav-is-open");
 });
+
+// Sticky menu when scrolling
+var mainHeader = $(".header");
+var headerScrollThreshold = 0;
+$(window).on("scroll", function () {
+  var scroll = $(window).scrollTop();
+  if (scroll >= headerScrollThreshold) {
+    mainHeader.addClass("header-sticky");
+    $("body").addClass("header-sticky-body");
+  } else {
+    mainHeader.removeClass("header-sticky");
+    $("body").removeClass("header-sticky-body");
+  }
+});
 "use strict";
 
 $(window).scroll(function () {
@@ -325,3 +339,32 @@ for (var i = 0; i < thumbsBigSlider.length; i++) {
     }
   });
 }
+"use strict";
+
+// Check for screen resolution under 768px using matchMedia
+var mediaQuery = window.matchMedia("(max-width: 767px)");
+function handleScroll() {
+  if (mediaQuery.matches) {
+    // Get the threshold button element and its offset from the top
+    var thresholdElement = $(".btn-sticky-mobile-threshold");
+    var thresholdOffset = thresholdElement.offset().top + 50;
+
+    // Get the scroll position
+    var scrollPosition = $(window).scrollTop();
+
+    // Check if the scroll position is past the threshold element
+    if (scrollPosition >= thresholdOffset) {
+      // Make the sticky mobile button visible
+      $(".btn-sticky-mobile").removeClass("d-none");
+    } else {
+      // Hide the sticky mobile button
+      $(".btn-sticky-mobile").addClass("d-none");
+    }
+  }
+}
+
+// Run the function initially and on scroll
+$(window).on("scroll", handleScroll);
+
+// Also check if the screen resolution changes (optional)
+mediaQuery.addEventListener("change", handleScroll);

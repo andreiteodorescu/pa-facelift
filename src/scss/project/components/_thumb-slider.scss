@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: row-reverse;
   max-height: 500px;
+
+  img {
+    border-radius: $border-radius;
+  }
 }
 
 .thumbs-slider {
