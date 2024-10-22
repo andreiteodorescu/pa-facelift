@@ -898,8 +898,8 @@
                   <div class="mt-1">Locatie vehicul: Bucuresti, Sector 6</div>
                 </div>
               </div>
-              <div class="follow-widget-track">
-                <div class="follow-widget">
+              <div class="sticky-box-track">
+                <div class="sticky-box">
                   <div class="side-card shadow-sm">
                     <div class="side-card-seller-images">
                       <!-- Daca e seller individual deci nu are logo adauga clasa asta: "individual" -->
@@ -972,135 +972,6 @@
                           ></use>
                         </svg>
                       </a>
-
-                      <!-- Modal start -->
-                      <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                      >
-                        <div class="modal-dialog modal-custom">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h3 class="modal-title" id="exampleModalLabel">
-                                Solicitare informații
-                              </h3>
-                              <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                              >
-                                <span class="visually-hidden">Închide</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="car-modal-header">
-                                <a
-                                  title="Renault Trafic L2H1 dCi 110 CP 9 locuri"
-                                  href="https://plus-auto.ro/anunt/renault-trafic-l2h1-dci-110-cp-9-locuri-42/"
-                                  class="car-modal-header-image"
-                                >
-                                  <img
-                                    src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/715/715-1893200-thumbnail.webp"
-                                    loading="lazy"
-                                    alt="Renault Trafic"
-                                    class="img-fluid"
-                                  />
-                                </a>
-                                <div class="car-modal-header-content">
-                                  <h3 class="car-modal-header-title">
-                                    Renault Trafic L2H1 dCi 110 CP 9 locuri
-                                  </h3>
-
-                                  <div class="car-modal-header-price">
-                                    <div
-                                      class="car-modal-header-price-discount"
-                                    >
-                                      a fost <span>50.000</span>
-                                    </div>
-                                    <div class="car-modal-header-price-normal">
-                                      39.500 €
-                                    </div>
-
-                                    <div class="car-modal-header-price-vat">
-                                      33.193 € NET
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row mt-3">
-                                <div class="col-sm-6">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Nume si prenume *"
-                                  />
-                                </div>
-                                <div class="col-sm-6 mt-3 mt-sm-0">
-                                  <input
-                                    type="email"
-                                    class="form-control"
-                                    placeholder="Adresa de email"
-                                  />
-                                </div>
-                              </div>
-                              <div class="row mt-3">
-                                <div class="col-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Numar de telefon *"
-                                  />
-                                </div>
-                              </div>
-                              <div class="row mt-3">
-                                <div class="col-12">
-                                  <textarea
-                                    class="form-control"
-                                    rows="3"
-                                    placeholder="Mesaj * Exemplu: Bună ziua, Mă interesează această mașină. Îmi puteți oferi mai multe informații despre ea?"
-                                  ></textarea>
-                                </div>
-                              </div>
-                              <div class="row mt-3">
-                                <div class="col-12">
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                      value=""
-                                      id="flexCheckDefault"
-                                    />
-                                    <label
-                                      class="form-check-label modal-terms-label"
-                                      for="flexCheckDefault"
-                                    >
-                                      Sunt de acord cu stocarea și procesarea
-                                      datelor cu caracter personal de către OLD
-                                      AUTO ROLLING S.R.L. conform
-                                      <a href="/gdpr" target="_blank"
-                                        >Politica de prelucrare și procesare a
-                                        datelor cu caracter personal</a
-                                      >.
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row mt-4">
-                                <div class="col-12">
-                                  <button class="btn btn-primary w-100">
-                                    Trimite solicitarea
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Modal end -->
                     </div>
                   </div>
                 </div>
@@ -1423,6 +1294,128 @@
       </div>
     </footer>
 
+    <!-- Modal start -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">
+              Solicitare informații
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="visually-hidden">Închide</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="car-modal-header">
+              <a
+                title="Renault Trafic L2H1 dCi 110 CP 9 locuri"
+                href="https://plus-auto.ro/anunt/renault-trafic-l2h1-dci-110-cp-9-locuri-42/"
+                class="car-modal-header-image"
+              >
+                <img
+                  src="https://plus-auto.fra1.cdn.digitaloceanspaces.com/vehicles_images/715/715-1893200-thumbnail.webp"
+                  loading="lazy"
+                  alt="Renault Trafic"
+                  class="img-fluid"
+                />
+              </a>
+              <div class="car-modal-header-content">
+                <h3 class="car-modal-header-title">
+                  Renault Trafic L2H1 dCi 110 CP 9 locuri
+                </h3>
+
+                <div class="car-modal-header-price">
+                  <div class="car-modal-header-price-discount">
+                    a fost <span>50.000</span>
+                  </div>
+                  <div class="car-modal-header-price-normal">39.500 €</div>
+
+                  <div class="car-modal-header-price-vat">33.193 € NET</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nume si prenume *"
+                />
+              </div>
+              <div class="col-sm-6 mt-3 mt-sm-0">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Adresa de email"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Numar de telefon *"
+                />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Mesaj * Exemplu: Bună ziua, Mă interesează această mașină. Îmi puteți oferi mai multe informații despre ea?"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label
+                    class="form-check-label modal-terms-label"
+                    for="flexCheckDefault"
+                  >
+                    Sunt de acord cu stocarea și procesarea datelor cu caracter
+                    personal de către OLD AUTO ROLLING S.R.L. conform
+                    <a href="/gdpr" target="_blank"
+                      >Politica de prelucrare și procesare a datelor cu caracter
+                      personal</a
+                    >.
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <button class="btn btn-primary w-100">
+                  Trimite solicitarea
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1434,9 +1427,9 @@
     <script src="../js/standalone/sticky.js"></script>
 
     <script type="text/javascript">
-      const stickyWidget = new StickySidebar(".follow-widget", {
+      const stickyWidget = new StickySidebar(".sticky-box", {
         topSpacing: 75,
-        containerSelector: ".follow-widget-track",
+        containerSelector: ".sticky-box-track",
         minWidth: 1199,
       });
     </script>

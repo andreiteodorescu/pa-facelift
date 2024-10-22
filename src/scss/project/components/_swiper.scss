@@ -719,28 +719,28 @@ button.swiper-pagination-bullet {
   justify-content: center;
   margin-top: 30px;
   gap: 15px;
-}
 
-.swiper-button-next,
-.swiper-button-prev {
-  top: auto;
-  position: static;
-  width: 60px;
-  height: 40px;
-  border-radius: 30px;
-  color: inherit;
-  border: 1px solid $gen-color;
-  transition: all 0.3s ease-in-out;
-  left: auto;
-  right: auto;
-  margin-top: 0;
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    position: static;
+    width: 60px;
+    height: 40px;
+    border-radius: 30px;
+    color: inherit;
+    border: 1px solid $gen-color;
+    transition: all 0.3s ease-in-out;
+    left: auto;
+    right: auto;
+    margin-top: 0;
 
-  &::after {
-    font-size: 12px;
-  }
+    &::after {
+      font-size: 12px;
+    }
 
-  &:hover {
-    background-color: $gen-color;
-    color: #fff;
+    &:hover {
+      background-color: $gen-color;
+      color: #fff;
+    }
   }
 }

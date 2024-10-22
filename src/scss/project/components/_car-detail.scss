@@ -245,6 +245,8 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
+      flex: 1;
+      flex-shrink: 0;
 
       &-icon {
         width: 40px;
@@ -387,7 +389,7 @@ a.side-card-seller-info-location {
   }
 }
 
-.follow-widget {
+.sticky-box {
   will-change: min-height;
 
   &-track {

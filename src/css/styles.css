@@ -12437,6 +12437,10 @@ h1,
   box-shadow: none; /* Remove the green box-shadow (for checkboxes and radios) */
 }
 
+.dark-border {
+  border-color: #a8a8a8;
+}
+
 .visually-hidden-focusable:focus,
 .visually-hidden-focusable:focus-within {
   display: inline-block;
@@ -14169,6 +14173,8 @@ h1,
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex: 1;
+  flex-shrink: 0;
 }
 .side-card-seller-info-location-icon {
   width: 40px;
@@ -14286,13 +14292,13 @@ a.side-card-seller-info-location:hover, a.side-card-seller-info-location:active 
   }
 }
 
-.follow-widget {
+.sticky-box {
   will-change: min-height;
 }
-.follow-widget-track {
+.sticky-box-track {
   flex: 1;
 }
-.follow-widget.is-affixed {
+.sticky-box.is-affixed {
   z-index: 3;
 }
 
@@ -15098,9 +15104,8 @@ button.swiper-pagination-bullet {
   margin-top: 30px;
   gap: 15px;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-custom-nav .swiper-button-next,
+.swiper-custom-nav .swiper-button-prev {
   top: auto;
   position: static;
   width: 60px;
@@ -15113,12 +15118,12 @@ button.swiper-pagination-bullet {
   right: auto;
   margin-top: 0;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper-custom-nav .swiper-button-next::after,
+.swiper-custom-nav .swiper-button-prev::after {
   font-size: 12px;
 }
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.swiper-custom-nav .swiper-button-next:hover,
+.swiper-custom-nav .swiper-button-prev:hover {
   background-color: #212529;
   color: #fff;
 }
@@ -15735,6 +15740,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  height: 100%;
 }
 
 .thumbs-slider-wrapper {

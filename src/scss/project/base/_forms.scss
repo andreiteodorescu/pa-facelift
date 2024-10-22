@@ -68,6 +68,10 @@
   box-shadow: none; /* Remove the green box-shadow (for checkboxes and radios) */
 }
 
+.dark-border {
+  border-color: $grey-medium-3;
+}
+
 // .form-control:focus {
 //   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
 // }
