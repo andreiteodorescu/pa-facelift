@@ -10,4 +10,27 @@
       padding-top: 50px;
     }
   }
+
+  &-landing {
+    color: #fff;
+    background-image: url("../assets/images/bg-red-horizontal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+}
+
+.hero-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }

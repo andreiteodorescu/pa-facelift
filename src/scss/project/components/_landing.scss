@@ -1,0 +1,60 @@
+.leasing-benefits-card {
+  background-color: $grey-extralight;
+  border-radius: $border-radius;
+  padding: 30px;
+  padding-top: 80px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-icon {
+    background-color: $red;
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 30px;
+    top: -30px;
+
+    svg {
+      fill: #fff;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &-title {
+    font-size: 19px;
+    margin: 0;
+  }
+}
+
+.leasing-auto-rulate {
+  background-image: url("../assets/images/leasing-auto-rulate.webp");
+}
+
+.red-card {
+  background-color: $red;
+  color: #fff;
+  padding: 40px 30px;
+  max-width: 415px;
+
+  &-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &-bottom {
+    transform: translateY(30px);
+  }
+}
+
+.container-flex {
+  display: flex;
+  height: 100%;
+}

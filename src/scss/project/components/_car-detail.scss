@@ -145,6 +145,26 @@
       gap: 5px;
     }
   }
+
+  &-big {
+    font-size: 20px;
+    font-weight: 600;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .checked-list-icon {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #c03a2e;
+      }
+    }
+  }
 }
 
 .car-detail-sidebar {

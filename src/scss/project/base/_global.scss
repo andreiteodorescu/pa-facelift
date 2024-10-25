@@ -28,6 +28,17 @@ body {
   }
 }
 
+.component-full-bg {
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    height: 400px;
+  }
+}
+
 .dropdown-toggle {
   padding-right: 20px;
   position: relative;
