@@ -1,0 +1,134 @@
+.formular-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &-item {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: 400px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    &-helper {
+      color: $grey-medium-4;
+    }
+
+    &-options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .form-check {
+        min-height: auto;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+          padding: 0 !important;
+        }
+
+        &-input {
+          display: none;
+
+          &:disabled + .form-check-label {
+            background: $grey-extralight;
+            color: $grey-medium-3;
+            opacity: 0.9;
+          }
+
+          &:checked + .form-check-label {
+            background: $gen-color;
+            color: #fff !important;
+          }
+        }
+
+        &-label {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          background: $grey-extralight-2;
+          border: none;
+          color: $gen-color;
+          font-weight: 700;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+
+          &:hover,
+          &:focus {
+            background: $grey-medium-2;
+          }
+        }
+      }
+
+      &-btn {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: $grey-extralight-2;
+        border: none;
+        color: $gen-color;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          background: $grey-medium-2;
+        }
+
+        &:disabled {
+          background: $grey-extralight;
+          color: $grey-medium-3;
+        }
+      }
+    }
+
+    &-textarea {
+      height: 100px !important;
+    }
+  }
+}
+
+.feedback-form.was-validated
+  .formular-feedback-item-options
+  .form-check-input:invalid
+  ~ .form-check-label {
+  border: 1px solid $red;
+}
+
+.feedback-form.was-validated
+  .formular-feedback-item-options
+  .form-check-input:valid
+  ~ .form-check-label {
+  color: $gen-color;
+}
+
+.feedback-form.was-validated {
+  .formular-feedback-item-options:has(
+      .form-control:invalid,
+      .form-check-input:invalid,
+      .form-select:invalid:not([multiple]):not([size])
+    ) {
+    + .invalid-feedback {
+      display: block;
+    }
+  }
+}

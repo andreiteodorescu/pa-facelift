@@ -11,6 +11,7 @@
     overflow: hidden;
     margin: 0;
     position: relative;
+    border-bottom: 1px solid $grey-extralight-2;
 
     img {
       object-fit: cover;
@@ -158,6 +159,14 @@
 
     &-seller {
       font-size: 14px;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     &-info {
@@ -211,6 +220,7 @@
         &-old {
           font-size: 13px;
           color: $red;
+          font-weight: 500;
 
           span {
             text-decoration: line-through;
@@ -349,6 +359,8 @@
       @media (min-width: 1101px) {
         border-top-right-radius: 0;
         border-bottom-left-radius: $border-radius;
+        border-bottom: none;
+        border-right: 1px solid $grey-extralight-2;
       }
 
       @media (min-width: 1281px) and (max-width: 1350px) {

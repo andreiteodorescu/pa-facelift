@@ -225,7 +225,9 @@ $(window).on("scroll", function () {
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 300) {
-    $("#scrollToTopBtn").fadeIn();
+    $("#scrollToTopBtn").fadeIn(function () {
+      $(this).css("display", "inline-flex");
+    });
   } else {
     $("#scrollToTopBtn").fadeOut();
   }

@@ -1,0 +1,150 @@
+.img-thumbnail-custom {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+}
+
+.location-tabs {
+  justify-content: center;
+  gap: 10px;
+  border-bottom: none;
+
+  .nav-item {
+    min-width: 150px;
+  }
+
+  .nav-link {
+    border-radius: 6px;
+    border: none;
+    padding: 11px 15px 9px;
+    color: #fff;
+    background-color: $red;
+    font-weight: 600;
+    width: 100%;
+
+    &:active,
+    &:hover,
+    &:focus-visible {
+      background-color: $red-hover;
+    }
+
+    &.active {
+      background-color: $gen-color;
+      color: #fff;
+    }
+  }
+}
+
+.location-pane {
+  border: 1px solid $grey-extralight-2;
+  border-radius: $border-radius;
+  padding: 15px;
+
+  &-split {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+  }
+
+  &-details {
+    width: 500px;
+    flex-shrink: 0;
+    padding-right: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(xl) {
+      width: 400px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 24px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: $red;
+      display: flex;
+      gap: 5px;
+
+      svg {
+        fill: $red;
+        width: 20px;
+        height: 22px;
+      }
+    }
+
+    .btn {
+      padding: 13px 15px 11px;
+      min-height: auto;
+    }
+  }
+
+  &-map {
+    flex: 1;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+.representatives {
+  border-top: 1px solid $grey-extralight-2;
+  margin-top: 25px;
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  &-card {
+    border: 1px solid $grey-extralight-2;
+    border-radius: 5px;
+    width: 250px;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  &-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  &-name {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 8px 0 15px;
+    padding-top: 15px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 40px;
+      height: 5px;
+      background-color: $red;
+      border-radius: 15px;
+      top: 0;
+    }
+  }
+}
