@@ -15884,10 +15884,18 @@ button.swiper-pagination-bullet {
   border-top: 1px solid #e1e1e1;
   margin-top: 25px;
   padding-top: 25px;
+  padding-bottom: 10px;
+}
+.representatives-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+}
+.representatives-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c03a2e;
 }
 .representatives-card {
   border: 1px solid #e1e1e1;
@@ -16424,6 +16432,23 @@ a.subscription-card-bottom-note:hover {
 .form-check-input:invalid,
 .form-select:invalid:not([multiple]):not([size])) + .invalid-feedback {
   display: block;
+}
+
+.thank-you {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.thank-you-title {
+  font-size: 26px;
+  font-weight: 400;
+}
+.thank-you-icon {
+  fill: #c03a2e;
+  width: 100px;
+  height: 100px;
 }
 
 .modal-title {

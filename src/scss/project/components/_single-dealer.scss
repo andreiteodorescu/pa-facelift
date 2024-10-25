@@ -109,10 +109,20 @@
   border-top: 1px solid $grey-extralight-2;
   margin-top: 25px;
   padding-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  padding-bottom: 10px;
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &-section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $red;
+  }
 
   &-card {
     border: 1px solid $grey-extralight-2;
